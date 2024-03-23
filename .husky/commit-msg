@@ -1,0 +1,1 @@
+touch .husky/commit-msg && chmod a+x .husky/commit-msg

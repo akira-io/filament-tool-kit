@@ -1,26 +1,84 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament-tool-kit.css --postcss --watch",
-        "dev:scripts": "node bin/build.js --dev",
-        "build:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament-tool-kit.css --postcss --minify && npm run purge",
-        "build:scripts": "node bin/build.js",
-        "purge": "filament-purge -i resources/dist/filament-tool-kit.css -o resources/dist/filament-tool-kit.css -v 3.x",
-        "dev": "npm-run-all --parallel dev:*",
-        "build": "npm-run-all build:*"
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament-tool-kit.css --postcss --watch",
+    "dev:scripts": "node bin/build.js --dev",
+    "build:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament-tool-kit.css --postcss --minify && npm run purge",
+    "build:scripts": "node bin/build.js",
+    "purge": "filament-purge -i resources/dist/filament-tool-kit.css -o resources/dist/filament-tool-kit.css -v 3.x",
+    "dev": "npm-run-all --parallel dev:*",
+    "build": "npm-run-all build:*",
+    "prepare": "husky",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@awcodes/filament-plugin-purge": "^1.1.1",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@tailwindcss/forms": "^0.5.4",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "esbuild": "^0.19.2",
+    "husky": "^9.0.11",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.26",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "release-it": "^17.1.1",
+    "tailwindcss": "^3.3.3"
+  },
+  "release-it": {
+    "git": {
+      "requireBranch": "develop",
+      "commitMessage": "chore(release): ${version}"
     },
-    "devDependencies": {
-        "@awcodes/filament-plugin-purge": "^1.1.1",
-        "@tailwindcss/forms": "^0.5.4",
-        "@tailwindcss/typography": "^0.5.9",
-        "autoprefixer": "^10.4.14",
-        "esbuild": "^0.19.2",
-        "npm-run-all": "^4.1.5",
-        "postcss": "^8.4.26",
-        "postcss-import": "^15.1.0",
-        "prettier": "^2.7.1",
-        "prettier-plugin-tailwindcss": "^0.1.13",
-        "tailwindcss": "^3.3.3"
+    "github": {
+      "release": true,
+      "releaseName": "v${version}",
+      "draft": false,
+      "preRelease": false,
+      "tokenRef": "GITHUB_TOKEN"
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": "conventionalcommits",
+        "types": {
+          "feat": {
+            "section": "Features"
+          },
+          "fix": {
+            "section": "Bug Fixes"
+          },
+          "chore": {
+            "section": "Miscellaneous Chores"
+          },
+          "refactor": {
+            "section": "Code Refactoring"
+          },
+          "revert": {
+            "section": "Reverts"
+          },
+          "docs": {
+            "section": "Documentation",
+            "hidden": true
+          },
+          "style": {
+            "section": "Styles",
+            "hidden": true
+          },
+          "test": {
+            "section": "Tests",
+            "hidden": true
+          }
+        }
+      }
     }
+  }
 }
