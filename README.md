@@ -1,4 +1,4 @@
-# This is my package filament-tool-kit
+# Filament Tool Kit
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/akira/filament-tool-kit.svg?style=flat-square)](https://packagist.org/packages/akira/filament-tool-kit)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/akira/filament-tool-kit/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/akira/filament-tool-kit/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -7,7 +7,7 @@
 
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+A powerhouse of tools designed to turbocharge our data management and visualization game. From seamless organization to jaw-dropping visuals, Filament Toolkit is about  how we interact with data on Filament.
 
 ## Installation
 
@@ -17,24 +17,12 @@ You can install the package via composer:
 composer require akira/filament-tool-kit
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filament-tool-kit-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="filament-tool-kit-config"
 ```
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="filament-tool-kit-views"
-```
 
 This is the contents of the published config file:
 
@@ -46,8 +34,9 @@ return [
 ## Usage
 
 ```php
-$filamentToolKit = new Akira\FilamentToolKit();
-echo $filamentToolKit->echoPhrase('Hello, Akira!');
+IdInput::make() // for input form
+IdColumn::make() // for table column
+IdEntry::make() // for infolist entry
 ```
 
 ## Testing
