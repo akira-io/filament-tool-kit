@@ -32,7 +32,6 @@
   },
   "release-it": {
     "git": {
-      "requireBranch": "develop",
       "commitMessage": "chore(release): ${version}"
     },
     "github": {
