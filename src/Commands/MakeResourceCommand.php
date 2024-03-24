@@ -12,7 +12,7 @@ use Illuminate\Support\Arr;
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 
-class FilamentToolKitCommand extends Command
+class MakeResourceCommand extends Command
 {
     use CanIndentStrings;
     use CanManipulateFiles;

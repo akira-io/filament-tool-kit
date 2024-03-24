@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
+use Akira\FilamentToolKit\Table\Columns\Text\IdTextColumn;
+
 class {{ modelClass }}TableSchema
 {
     public static function make(): array
     {
         return [
-            //
+            IdTextColumn::make(),
         ];
     }
 }

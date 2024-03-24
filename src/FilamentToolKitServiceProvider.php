@@ -2,7 +2,9 @@
 
 namespace Akira\FilamentToolKit;
 
-use Akira\FilamentToolKit\Commands\FilamentToolKitCommand;
+use Akira\FilamentToolKit\Commands\MakePageCommand;
+use Akira\FilamentToolKit\Commands\MakeRelationManagerCommand;
+use Akira\FilamentToolKit\Commands\MakeResourceCommand;
 use Akira\FilamentToolKit\Testing\TestsFilamentToolKit;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -113,7 +115,9 @@ class FilamentToolKitServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            FilamentToolKitCommand::class,
+            MakeResourceCommand::class,
+            MakeRelationManagerCommand::class,
+            MakePageCommand::class,
         ];
     }
 
