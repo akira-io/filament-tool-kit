@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\RestoreBulkAction;
+
+class {{ modelClass }}TableBulkActions
+{
+    public static function make(): array
+    {
+        return [
+            BulkActionGroup::make([
+                DeleteBulkAction::make(),
+                RestoreBulkAction::make(),
+            ]),
+        ];
+    }
+}

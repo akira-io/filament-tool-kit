@@ -13,3 +13,5 @@ testbench.yaml
 vendor
 
 .phpunit.cache/code-coverage/
+
+.phpunit.cache/test-results

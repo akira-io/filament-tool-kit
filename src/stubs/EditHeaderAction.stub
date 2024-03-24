@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }}\Actions\Pages;
+
+use {{ namespace }}\Forms\{{ modelClass }}Form;
+use Filament\Actions\EditAction;
+use Filament\Forms\Form;
+
+class {{ modelClass }}EditHeaderAction
+{
+    public static function make(): EditAction
+    {
+        return EditAction::make()
+            ->form(fn (Form $form) => {{ modelClass }}Form::make($form)
+            ->columns());
+    }
+}

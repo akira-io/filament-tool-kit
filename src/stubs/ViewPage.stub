@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }}\Pages;
+
+use {{ resource }}\{{ resourceClass }};
+use Filament\Actions;
+use {{ baseResourcePage }};
+use {{ namespace }}\Actions\Pages\{{ modelClass }}EditHeaderAction;
+
+class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
+{
+    protected static string $resource = {{ resourceClass }}::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+           {{ modelClass }}EditHeaderAction::make(),
+        ];
+    }
+}

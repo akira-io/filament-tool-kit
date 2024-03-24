@@ -1,0 +1,54 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Akira\FilamentToolKit\InfoList\Entries\CreatedAtTextEntry;
+use Akira\FilamentToolKit\InfoList\Entries\UpdatedAtTextEntry;
+
+use Filament\Infolists\Components\Section;
+
+class {{ modelClass }}InfoListSchema
+{
+    public static function make(): array
+    {
+        return [
+            self::getInformationSection(),
+            self::getTimeStampsSection(),
+        ];
+    }
+
+    private static function getTimeStampsSectionSchema(): array
+    {
+        return [
+            CreatedAtTextEntry::make(),
+            UpdatedAtTextEntry::make(),
+        ];
+    }
+
+    private static function getInformationSection(): Section
+    {
+        return Section::make()
+            ->description(__(' {{ modelClass }} Information'))
+            ->schema(self::getInformationSectionSchema())
+            ->columnSpan(1)
+            ->columns(3);
+    }
+
+    private static function getTimeStampsSection(): Section
+    {
+        return Section::make()
+            ->description(__('Timestamps'))
+            ->schema(self::getTimeStampsSectionSchema())
+            ->columns()
+            ->columnSpan(1);
+    }
+
+    private static function getInformationSectionSchema(): array
+    {
+        return [
+            //
+        ];
+    }
+}

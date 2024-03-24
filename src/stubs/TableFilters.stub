@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+class {{ modelClass }}TableFilters
+{
+    public static function make(): array
+    {
+        return [
+            //
+        ];
+    }
+}

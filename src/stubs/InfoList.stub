@@ -1,0 +1,16 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Filament\Infolists\Infolist;
+
+class {{ modelClass }}InfoList
+{
+    public static function make(Infolist $infolist): Infolist
+    {
+        return $infolist
+                   ->schema({{ modelClass }}InfoListSchema::make());
+    }
+}

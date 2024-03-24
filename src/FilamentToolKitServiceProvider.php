@@ -4,7 +4,6 @@ namespace Akira\FilamentToolKit;
 
 use Akira\FilamentToolKit\Commands\FilamentToolKitCommand;
 use Akira\FilamentToolKit\Testing\TestsFilamentToolKit;
-use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
@@ -34,8 +33,8 @@ class FilamentToolKitServiceProvider extends PackageServiceProvider
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
+//                    ->publishMigrations()
+//                    ->askToRunMigrations()
                     ->askToStarRepoOnGitHub('akira/filament-tool-kit');
             });
 

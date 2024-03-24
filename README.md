@@ -5,16 +5,26 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/akira/filament-tool-kit/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/akira/filament-tool-kit/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/akira/filament-tool-kit.svg?style=flat-square)](https://packagist.org/packages/akira/filament-tool-kit)
 
+A powerhouse of tools designed to turbocharge our data management and visualization game. From seamless organization to
+jaw-dropping visuals, Filament Toolkit is about how we interact with data on Filament.
 
+## Dependencies
 
-A powerhouse of tools designed to turbocharge our data management and visualization game. From seamless organization to jaw-dropping visuals, Filament Toolkit is about  how we interact with data on Filament.
+- Laravel 10.x
+- Filament 3.x
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require akira/filament-tool-kit
+composer require akira/filament-tool-kit -W
+```
+
+You can publish the translation file with:
+
+```bash
+php artisan vendor:publish --tag="filament-tool-kit-translations"
 ```
 
 You can publish the config file with:
@@ -22,7 +32,6 @@ You can publish the config file with:
 ```bash
 php artisan vendor:publish --tag="filament-tool-kit-config"
 ```
-
 
 This is the contents of the published config file:
 

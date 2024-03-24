@@ -1,0 +1,26 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Filament\Forms\Components\Section;
+
+class {{ modelClass }}FormSchema
+{
+    public static function make(): array
+    {
+        return [
+            Section::make()
+                ->schema(self::getFormSchema())
+                ->columns(),
+        ];
+    }
+
+    private static function getFormSchema(): array
+    {
+        return [
+            //
+        ];
+    }
+}
