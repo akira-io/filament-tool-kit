@@ -1,5 +1,12 @@
 
 
+## [1.1.0](https://github.com/akira-io/filament-tool-kit/compare/1.0.0...1.1.0) (2024-03-25)
+
+
+### Features
+
+* multiple and simple resource options ([#11](https://github.com/akira-io/filament-tool-kit/issues/11)) ([b792b61](https://github.com/akira-io/filament-tool-kit/commit/b792b61f9cc96cbfcaeb0d67b0326023fe3e57b0))
+
 ## 1.0.0 (2024-03-24)
 
 
