@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Akira\FilamentToolKit\Support\Commands\Concerns;
 
-trait CanIdentStrings
+trait CanIndentStrings
 {
     protected function indentString(string $string, int $level = 1): string
     {
         return implode(
             PHP_EOL,
             array_map(
-                fn (string $line) => ($line !== '') ? (str_repeat('    ', $level) . "{$line}") : '',
+                fn (string $line) => ($line !== '') ? (str_repeat('    ', $level)."{$line}") : '',
                 explode(PHP_EOL, $string),
             ),
         );

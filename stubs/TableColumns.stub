@@ -6,7 +6,7 @@ namespace {{ namespace }};
 
 use Akira\FilamentToolKit\Table\Columns\Text\IdTextColumn;
 
-class {{ modelClass }}TableSchema
+class {{ modelClass }}TableColumns
 {
     public static function make(): array
     {

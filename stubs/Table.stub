@@ -12,7 +12,7 @@ class {{ modelClass }}Table
     public static function make(Table $table): Table
     {
         return $table
-            ->columns({{ modelClass }}TableSchema::make())
+            ->columns({{ modelClass }}TableColumns::make())
             ->filters({{ modelClass }}TableFilters::make())
             ->actions({{ modelClass }}TableActions::make())
             ->bulkActions({{ modelClass }}TableBulkActions::make());
