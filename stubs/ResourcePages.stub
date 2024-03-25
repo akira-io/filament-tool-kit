@@ -4,17 +4,13 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-use {{ namespace }};
 
 class {{ modelClass }}Pages
 {
     public static function make(): array
     {
         return [
-            'index' => List{{ pluralModelClass }}::route('/'),
-            'create' => Create{{ modelClass }}::route('/create'),
-            'view' => View{{ modelClass }}::route('/{record}'),
-            'edit' => Edit{{ modelClass }}::route('/{record}/edit'),
+{{ pages }}
         ];
     }
 }

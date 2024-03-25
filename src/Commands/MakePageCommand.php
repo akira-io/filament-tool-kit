@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Akira\FilamentToolKit\Commands;
 
+use Akira\FilamentToolKit\Support\Commands\Concerns\CanIndentStrings;
+use Akira\FilamentToolKit\Support\Commands\Concerns\CanManipulateFiles;
 use Filament\Clusters\Cluster;
 use Filament\Facades\Filament;
 use Filament\Panel;
-use Filament\Support\Commands\Concerns\CanIndentStrings;
-use Filament\Support\Commands\Concerns\CanManipulateFiles;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
