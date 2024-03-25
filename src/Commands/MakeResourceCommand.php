@@ -63,7 +63,7 @@ class MakeResourceCommand extends Command
         return self::SUCCESS;
     }
 
-    private function handleCommand(Panel $panel, string $model = null)
+    private function handleCommand(Panel $panel, ?string $model = null)
     {
         $model = str($model ?? text(
             label: 'What is the model name?',
@@ -172,7 +172,7 @@ class MakeResourceCommand extends Command
         }
 
         $this->copyStubToApp('Resource', $resourcePath, [
-            'baseResource' => 'Filament\\Resources\\Resource'.($needsAlias ? ' as BaseResource' : ''),
+            'baseResource' => 'Filament\\Resources\\Resource' . ($needsAlias ? ' as BaseResource' : ''),
             'baseResourceClass' => $needsAlias ? 'BaseResource' : 'Resource',
             'model' => "{$modelNamespace}\\{$modelClass}",
             'modelClass' => $modelClass,
@@ -183,15 +183,15 @@ class MakeResourceCommand extends Command
             'resourcePluralLabel' => ucfirst(str_replace('_', ' ', str($pluralModelClass)->snake())),
         ]);
 
-        $listPage = "'index' => List{$pluralModelClass}::route('/'),".PHP_EOL;
-        $createPage = "'create' => Create{$modelClass}::route('/create'),".PHP_EOL;
-        $viewPage = "'view' => View{$modelClass}::route('/{record}'),".PHP_EOL;
-        $editPage = "'edit' => Edit{$modelClass}::route('/{record}/edit'),".PHP_EOL;
+        $listPage = "'index' => List{$pluralModelClass}::route('/')," . PHP_EOL;
+        $createPage = "'create' => Create{$modelClass}::route('/create')," . PHP_EOL;
+        $viewPage = "'view' => View{$modelClass}::route('/{record}')," . PHP_EOL;
+        $editPage = "'edit' => Edit{$modelClass}::route('/{record}/edit')," . PHP_EOL;
 
-        $pages = $listPage.$createPage.$viewPage.$editPage;
+        $pages = $listPage . $createPage . $viewPage . $editPage;
 
         if ($this->option('simple')) {
-            $pages = $listPage.$viewPage;
+            $pages = $listPage . $viewPage;
         }
 
         $this->copyStubToApp('ResourcePages', $resourcePagesPath, [
@@ -202,7 +202,7 @@ class MakeResourceCommand extends Command
         ]);
 
         $this->copyStubToApp('ViewPage', $viewPagePath, [
-            'baseResourcePage' => 'Filament\\Resources\\Pages\\ViewRecord'.($needsAlias ? ' as BaseViewRecord' : ''),
+            'baseResourcePage' => 'Filament\\Resources\\Pages\\ViewRecord' . ($needsAlias ? ' as BaseViewRecord' : ''),
             'baseResourcePageClass' => $needsAlias ? 'BaseViewRecord' : 'ViewRecord',
             'namespace' => "{$namespace}\\{$resourceClass}",
             'resource' => "{$namespace}\\{$resourceClass}",
@@ -218,7 +218,7 @@ class MakeResourceCommand extends Command
         if (! $this->option('simple')) {
 
             $this->copyStubToApp('EditPage', $editPagePath, [
-                'baseResourcePage' => 'Filament\\Resources\\Pages\\EditRecord'.($needsAlias ? ' as BaseEditRecord' : ''),
+                'baseResourcePage' => 'Filament\\Resources\\Pages\\EditRecord' . ($needsAlias ? ' as BaseEditRecord' : ''),
                 'baseResourcePageClass' => $needsAlias ? 'BaseEditRecord' : 'EditRecord',
                 'actions' => $this->indentString($editPageActions, 3),
                 'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
@@ -228,7 +228,7 @@ class MakeResourceCommand extends Command
             ]);
 
             $this->copyStubToApp('CreatePage', $createPagePath, [
-                'baseResourcePage' => 'Filament\\Resources\\Pages\\CreateRecord'.($needsAlias ? ' as BaseCreateRecord' : ''),
+                'baseResourcePage' => 'Filament\\Resources\\Pages\\CreateRecord' . ($needsAlias ? ' as BaseCreateRecord' : ''),
                 'baseResourcePageClass' => $needsAlias ? 'BaseCreateRecord' : 'CreateRecord',
                 'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
                 'resource' => "{$namespace}\\{$resourceClass}",
@@ -238,7 +238,7 @@ class MakeResourceCommand extends Command
         }
 
         $this->copyStubToApp('ListPage', $listPagePath, [
-            'baseResourcePage' => 'Filament\\Resources\\Pages\\ListRecords'.($needsAlias ? ' as BaseListRecords' : ''),
+            'baseResourcePage' => 'Filament\\Resources\\Pages\\ListRecords' . ($needsAlias ? ' as BaseListRecords' : ''),
             'baseResourcePageClass' => $needsAlias ? 'BaseListRecords' : 'ListRecords',
             'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
             'resource' => "{$namespace}\\{$resourceClass}",
