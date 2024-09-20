@@ -58,5 +58,6 @@
   "Is active?": "Ativo",
   "Timestamp": "Timestamp",
   "Bank": "Banco",
-  "Deposit Percentage": "Percentagem de depósito"
+  "Deposit percentage": "Percentagem de depósito",
+  "Amount": "Valor"
 }
