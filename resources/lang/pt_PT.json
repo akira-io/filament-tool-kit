@@ -56,5 +56,6 @@
   "Allow users to log in from a VPN.": "Permitir que os utilizadores façam login a partir de uma VPN.",
   "Password reset days": "Redifinição de palavra-passe após x dias",
   "Is active?": "Ativo",
-  "Timestamp": "Timestamp"
+  "Timestamp": "Timestamp",
+  "Bank": "Banco"
 }
