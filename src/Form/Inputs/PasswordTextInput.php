@@ -16,6 +16,8 @@ final class PasswordTextInput
             ->revealable()
             ->password()
             ->minLength(8)
+            ->dehydrated(fn (?string $state) => filled($state))
+            ->required(fn (string $operation) => $operation === 'create')
             ->maxLength(255);
     }
 }
