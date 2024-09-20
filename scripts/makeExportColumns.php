@@ -87,17 +87,6 @@ PHP;
 
     return $createdResources;
 }
-
-function convertToPascalCase($fieldName)
-{
-    return str_replace(' ', '', ucwords(str_replace('_', ' ', $fieldName)));
-}
-
-function convertToHumanReadable($fieldName)
-{
-    return ucwords(str_replace('_', ' ', $fieldName));
-}
-
 // Usage example for export columns
 $createdExportColumns = generateExportColumns(
     'Export',

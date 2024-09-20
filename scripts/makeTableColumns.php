@@ -13,7 +13,6 @@ function generateColumns(
     string $namespacePath,
     string $translationFilePath
 ) {
-
     if (! is_dir($namespacePath)) {
         mkdir($namespacePath, 0755, true);
     }
@@ -36,8 +35,7 @@ function generateColumns(
     $createdResources = [];
 
     foreach ($fields as $fieldName => $translationValue) {
-        $className = convertToPascalCase($fieldName).ucfirst($columnType)
-            .'Entry'; // Updated for Entry
+        $className = convertToPascalCase($fieldName).ucfirst($columnType).'Column';
         $humanReadableKey = convertToHumanReadable($fieldName);
         $filePath = "$namespacePath/$className.php";
 
@@ -45,8 +43,28 @@ function generateColumns(
             continue; // Skip if the class file already exists
         }
 
-        // Set skeleton content based on column type
-        if ($columnType === 'Icon') {
+        // Check for the specific class name for the new skeleton
+        if ($columnType === 'Toggle' && $fieldName === 'is_active') {
+            $skeletonContent = <<<PHP
+<?php
+
+declare(strict_types=1);
+
+namespace Akira\FilamentToolKit\Table\Columns\Toggles;
+
+use Filament\Tables\Columns\ToggleColumn;
+
+final class $className
+{
+    public static function make(): ToggleColumn
+    {
+        return ToggleColumn::make('is_active')
+            ->label(__('Inactive/Active'));
+    }
+}
+
+PHP;
+        } elseif ($columnType === 'Icon') {
             $skeletonContent = <<<PHP
 <?php
 
@@ -145,18 +163,6 @@ PHP;
     $createdResources[] = 'Translations updated in pt_PT.json.';
 
     return $createdResources;
-}
-
-function convertToPascalCase($fieldName)
-{
-
-    return str_replace(' ', '', ucwords(str_replace('_', ' ', $fieldName)));
-}
-
-function convertToHumanReadable($fieldName)
-{
-
-    return ucwords(str_replace('_', ' ', $fieldName));
 }
 
 // Usage examples
