@@ -57,5 +57,6 @@
   "Password reset days": "Redifinição de palavra-passe após x dias",
   "Is active?": "Ativo",
   "Timestamp": "Timestamp",
-  "Bank": "Banco"
+  "Bank": "Banco",
+  "Deposit Percentage": "Percentagem de depósito"
 }
