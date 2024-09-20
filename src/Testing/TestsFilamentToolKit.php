@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Akira\FilamentToolKit\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
@@ -7,7 +9,7 @@ use Livewire\Features\SupportTesting\Testable;
 /**
  * @mixin Testable
  */
-class TestsFilamentToolKit
+final class TestsFilamentToolKit
 {
     //
 }

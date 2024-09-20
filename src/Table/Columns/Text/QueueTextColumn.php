@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Table\Columns\Text;
 
 use Filament\Tables\Columns\TextColumn;
 
-class QueueTextColumn
+final class QueueTextColumn
 {
     public static function make(): TextColumn
     {

@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\Toggles;
 
 use Filament\Forms\Components\Toggle;
 
-class ForceTwoFactorAuthenticationToggle
+final class ForceTwoFactorAuthenticationToggle
 {
     public static function make(): Toggle
     {

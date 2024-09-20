@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\DatePickers;
 
 use Filament\Forms\Components\DatePicker;
 
-class EmailVerifiedAtDatePicker
+final class EmailVerifiedAtDatePicker
 {
     public static function make(): DatePicker
     {

@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\Toggles;
 
 use Filament\Forms\Components\Toggle;
 
-class AllowVpnToggle
+final class AllowVpnToggle
 {
     public static function make(): Toggle
     {

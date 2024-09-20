@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Export\Columns;
 
 use Filament\Actions\Exports\ExportColumn;
 
-class AuthenticatableNameExportColumn
+final class AuthenticatableNameExportColumn
 {
     public static function make(): ExportColumn
     {

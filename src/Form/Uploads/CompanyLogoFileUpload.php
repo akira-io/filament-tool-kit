@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\Uploads;
 
 use Filament\Forms\Components\FileUpload;
 
-class CompanyLogoFileUpload
+final class CompanyLogoFileUpload
 {
     public static function make(): FileUpload
     {

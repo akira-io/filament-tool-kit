@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Export\Columns;
 
 use Filament\Actions\Exports\ExportColumn;
 
-class LogoutAtExportColumn
+final class LogoutAtExportColumn
 {
     public static function make(): ExportColumn
     {

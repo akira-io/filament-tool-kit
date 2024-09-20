@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Akira\FilamentToolKit\Tests;
 
 use Akira\FilamentToolKit\FilamentToolKitServiceProvider;
@@ -18,15 +20,25 @@ use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 
-class TestCase extends Orchestra
+final class TestCase extends Orchestra
 {
     protected function setUp(): void
     {
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Akira\\FilamentToolKit\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Akira\\FilamentToolKit\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+    }
+
+    public function getEnvironmentSetUp($app)
+    {
+        config()->set('database.default', 'testing');
+
+        /*
+        $migration = include __DIR__.'/../database/migrations/create_filament-tool-kit_table.php.stub';
+        $migration->up();
+        */
     }
 
     protected function getPackageProviders($app)
@@ -46,15 +58,5 @@ class TestCase extends Orchestra
             WidgetsServiceProvider::class,
             FilamentToolKitServiceProvider::class,
         ];
-    }
-
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_filament-tool-kit_table.php.stub';
-        $migration->up();
-        */
     }
 }

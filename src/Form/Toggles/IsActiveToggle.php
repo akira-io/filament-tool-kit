@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\Toggles;
 
 use Filament\Forms\Components\Toggle;
 
-class IsActiveToggle
+final class IsActiveToggle
 {
     public static function make(): Toggle
     {

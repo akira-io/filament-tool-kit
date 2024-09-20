@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\IconEntry;
 
-class IsActiveTextEntry
+final class IsActiveTextEntry
 {
     public static function make(): IconEntry
     {

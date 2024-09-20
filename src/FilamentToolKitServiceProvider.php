@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Akira\FilamentToolKit;
 
 use Akira\FilamentToolKit\Commands\MakePageCommand;
@@ -17,7 +19,7 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentToolKitServiceProvider extends PackageServiceProvider
+final class FilamentToolKitServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-tool-kit';
 
@@ -30,7 +32,7 @@ class FilamentToolKitServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package->name(static::$name)
+        $package->name(self::$name)
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
@@ -55,13 +57,11 @@ class FilamentToolKitServiceProvider extends PackageServiceProvider
         }
 
         if (file_exists($package->basePath('/../resources/views'))) {
-            $package->hasViews(static::$viewNamespace);
+            $package->hasViews(self::$viewNamespace);
         }
     }
 
-    public function packageRegistered(): void
-    {
-    }
+    public function packageRegistered(): void {}
 
     public function packageBooted(): void
     {
@@ -81,7 +81,7 @@ class FilamentToolKitServiceProvider extends PackageServiceProvider
 
         // Handle Stubs
         if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
+            foreach (app(Filesystem::class)->files(__DIR__.'/../stubs/') as $file) {
                 $this->publishes([
                     $file->getRealPath() => base_path("stubs/filament-tool-kit/{$file->getFilename()}"),
                 ], 'filament-tool-kit-stubs');
@@ -104,8 +104,8 @@ class FilamentToolKitServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filament-tool-kit', __DIR__ . '/../resources/dist/components/filament-tool-kit.js'),
-            Css::make('filament-tool-kit-styles', __DIR__ . '/../resources/dist/filament-tool-kit.css'),
-            Js::make('filament-tool-kit-scripts', __DIR__ . '/../resources/dist/filament-tool-kit.js'),
+            Css::make('filament-tool-kit-styles', __DIR__.'/../resources/dist/filament-tool-kit.css'),
+            Js::make('filament-tool-kit-scripts', __DIR__.'/../resources/dist/filament-tool-kit.js'),
         ];
     }
 

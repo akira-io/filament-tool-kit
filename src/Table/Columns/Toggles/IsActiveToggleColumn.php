@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Table\Columns\Toggles;
 
 use Filament\Tables\Columns\ToggleColumn;
 
-class IsActiveToggleColumn
+final class IsActiveToggleColumn
 {
     public static function make(): ToggleColumn
     {

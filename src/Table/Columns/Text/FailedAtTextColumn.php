@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Table\Columns\Text;
 
 use Filament\Tables\Columns\TextColumn;
 
-class FailedAtTextColumn
+final class FailedAtTextColumn
 {
     public static function make(): TextColumn
     {

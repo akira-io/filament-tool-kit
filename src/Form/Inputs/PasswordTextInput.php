@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\Inputs;
 
 use Filament\Forms\Components\TextInput;
 
-class PasswordTextInput
+final class PasswordTextInput
 {
     public static function make(): TextInput
     {

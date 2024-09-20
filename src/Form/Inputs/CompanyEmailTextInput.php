@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\Inputs;
 
 use Filament\Forms\Components\TextInput;
 
-class CompanyEmailTextInput
+final class CompanyEmailTextInput
 {
     public static function make(): TextInput
     {

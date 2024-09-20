@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Export\Columns;
 
 use Filament\Actions\Exports\ExportColumn;
 
-class IpAddressExportColumn
+final class IpAddressExportColumn
 {
     public static function make(): ExportColumn
     {

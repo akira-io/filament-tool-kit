@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\TextEntry;
 
-class FailedAtTextEntry
+final class FailedAtTextEntry
 {
     public static function make(): TextEntry
     {

@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\IconEntry;
 
-class LoginSuccessFullTextEntry
+final class LoginSuccessFullTextEntry
 {
     public static function make(): IconEntry
     {

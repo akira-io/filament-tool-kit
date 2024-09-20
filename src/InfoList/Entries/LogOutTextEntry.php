@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\TextEntry;
 
-class LogOutTextEntry
+final class LogOutTextEntry
 {
     public static function make(): TextEntry
     {

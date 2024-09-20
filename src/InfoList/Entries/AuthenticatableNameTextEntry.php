@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\TextEntry;
 
-class AuthenticatableNameTextEntry
+final class AuthenticatableNameTextEntry
 {
     public static function make(): TextEntry
     {

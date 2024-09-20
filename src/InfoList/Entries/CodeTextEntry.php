@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\TextEntry;
 
-class CodeTextEntry
+final class CodeTextEntry
 {
     public static function make(): TextEntry
     {

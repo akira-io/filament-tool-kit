@@ -14,7 +14,7 @@ use Illuminate\Support\Arr;
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 
-class MakeRelationManagerCommand extends Command
+final class MakeRelationManagerCommand extends Command
 {
     use CanIndentStrings;
     use CanManipulateFiles;
@@ -100,7 +100,7 @@ class MakeRelationManagerCommand extends Command
         if (! $this->option('force') && $this->checkForCollision([
             $path,
         ])) {
-            return static::INVALID;
+            return self::INVALID;
         }
 
         $tableHeaderActions = [];
@@ -158,8 +158,8 @@ class MakeRelationManagerCommand extends Command
 
         if ($this->option('soft-deletes')) {
             $modifyQueryUsing .= '->modifyQueryUsing(fn (Builder $query) => $query->withoutGlobalScopes([';
-            $modifyQueryUsing .= PHP_EOL . '    SoftDeletingScope::class,';
-            $modifyQueryUsing .= PHP_EOL . ']))';
+            $modifyQueryUsing .= PHP_EOL.'    SoftDeletingScope::class,';
+            $modifyQueryUsing .= PHP_EOL.']))';
 
             $tableBulkActions[] = 'Tables\Actions\RestoreBulkAction::make(),';
             $tableBulkActions[] = 'Tables\Actions\ForceDeleteBulkAction::make(),';
@@ -168,7 +168,7 @@ class MakeRelationManagerCommand extends Command
         $tableBulkActions = implode(PHP_EOL, $tableBulkActions);
 
         $this->copyStubToApp('RelationManager', $path, [
-            'modifyQueryUsing' => filled($modifyQueryUsing) ? PHP_EOL . $this->indentString($modifyQueryUsing, 3) : $modifyQueryUsing,
+            'modifyQueryUsing' => filled($modifyQueryUsing) ? PHP_EOL.$this->indentString($modifyQueryUsing, 3) : $modifyQueryUsing,
             'namespace' => "{$resourceNamespace}\\{$resource}\\RelationManagers",
             'managerClass' => $managerClass,
             'recordTitleAttribute' => $recordTitleAttribute,
@@ -186,6 +186,6 @@ class MakeRelationManagerCommand extends Command
 
         $this->components->info("Make sure to register the relation in `{$resource}::getRelations()`.");
 
-        return static::SUCCESS;
+        return self::SUCCESS;
     }
 }

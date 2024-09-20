@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\TextEntry;
 
-class EmailVerifiedAtTextEntry
+final class EmailVerifiedAtTextEntry
 {
     public static function make(): TextEntry
     {

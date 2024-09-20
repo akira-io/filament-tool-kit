@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Table\Columns\Icons;
 
 use Filament\Tables\Columns\IconColumn;
 
-class LoginSuccessFullIconColumn
+final class LoginSuccessFullIconColumn
 {
     public static function make(): IconColumn
     {

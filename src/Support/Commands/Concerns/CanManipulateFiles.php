@@ -18,7 +18,7 @@ trait CanManipulateFiles
                 continue;
             }
 
-            if (! confirm(basename($path) . ' already exists, do you want to overwrite it?')) {
+            if (! confirm(basename($path).' already exists, do you want to overwrite it?')) {
                 $this->components->error("{$path} already exists, aborting.");
 
                 return true;
@@ -37,7 +37,7 @@ trait CanManipulateFiles
     {
         $filesystem = app(Filesystem::class);
 
-        $stubPath = $this->getDefaultStubPath() . "/{$stub}.stub";
+        $stubPath = $this->getDefaultStubPath()."/{$stub}.stub";
 
         $stub = str($filesystem->get($stubPath));
 

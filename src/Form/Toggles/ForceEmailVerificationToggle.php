@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\Form\Toggles;
 
 use Filament\Forms\Components\Toggle;
 
-class ForceEmailVerificationToggle
+final class ForceEmailVerificationToggle
 {
     public static function make(): Toggle
     {

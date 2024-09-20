@@ -6,7 +6,7 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\TextEntry;
 
-class IpAddressTextEntry
+final class IpAddressTextEntry
 {
     public static function make(): TextEntry
     {
