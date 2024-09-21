@@ -29,7 +29,7 @@
 /scripts                export-ignore
 /vendor                 export-ignore
 /.husky                 export-ignore
-commitlint.config.js    export-ignore
-yarn.lock               export-ignore
-bin                     export-ignore
-postcss.config.js       export-ignore
+/yarn.lock               export-ignore
+/bin                     export-ignore
+/postcss.config.js       export-ignore
+/commitlint.config.cjs    export-ignore
