@@ -1,5 +1,21 @@
 
 
+## [1.3.0](https://github.com/akira-io/filament-tool-kit/compare/1.2.0...1.3.0) (2024-09-21)
+
+
+### Features
+
+* add Address and Emergency Phone text entries ([49d57ee](https://github.com/akira-io/filament-tool-kit/commit/49d57ee8ef4a8008126913819471603c516460ae))
+* add new text column components ([dba1390](https://github.com/akira-io/filament-tool-kit/commit/dba1390225723a8daf3ee6d9d55dcfb452a565a0))
+* add new text input and export column components ([d1981a5](https://github.com/akira-io/filament-tool-kit/commit/d1981a5806efc37601b1558b8aaa59ce59b7c9c4))
+* new fields added to columns.json for export ([c91e12c](https://github.com/akira-io/filament-tool-kit/commit/c91e12c23e1ed073051e07b5a50d17f2fcf5c606))
+
+
+### Bug Fixes
+
+* update export-ignore list in .gitattributes ([b39aed7](https://github.com/akira-io/filament-tool-kit/commit/b39aed7154acda502bd0709c19db974a4f248255))
+* update export-ignore list in .gitattributes ([1ee8304](https://github.com/akira-io/filament-tool-kit/commit/1ee8304603fe18d7d29c3c6c1faa3b3d33c39a48))
+
 ## [1.2.0](https://github.com/akira-io/filament-tool-kit/compare/1.1.0...1.2.0) (2024-09-21)
 
 
