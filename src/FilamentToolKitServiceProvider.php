@@ -19,7 +19,7 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-final class FilamentToolKitServiceProvider extends PackageServiceProvider
+class FilamentToolKitServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-tool-kit';
 
