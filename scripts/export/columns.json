@@ -1,3 +1,13 @@
 {
-  "login_at": "Login em"
+  "login_at": "Login em",
+  "first_name": "Nome",
+  "last_name": "Apelido",
+  "document_number": "Nº Documento",
+  "email": "E-mail",
+  "phone_number": "Telefone",
+  "emergency_phone": "Telefone de Emergência",
+  "address": "Morada",
+  "created_at": "Criado em",
+  "updated_at": "Atualizado em",
+  "deleted_at": "Apagado em"
 }
