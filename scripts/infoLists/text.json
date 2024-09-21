@@ -11,5 +11,8 @@
   "file_path": "Caminho do ficheiro",
   "total_rows": "Total de linhas",
   "processed_rows": "Linhas processadas",
-  "successful_rows": "Linhas com sucesso"
+  "successful_rows": "Linhas com sucesso",
+  "email": "E-mail",
+  "emergency_phone": "Telefone de emergência",
+  "address": "Morada"
 }
