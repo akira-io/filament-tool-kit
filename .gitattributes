@@ -32,3 +32,4 @@
 commitlint.config.js    export-ignore
 yarn.lock               export-ignore
 bin                     export-ignore
+postcss.config.js       export-ignore
