@@ -1,78 +1,78 @@
 {
-    "name": "akira/filament-tool-kit",
-    "description": "This is my package filament-tool-kit",
-    "keywords": [
-        "akira",
-        "laravel",
-        "filament-tool-kit"
-    ],
-    "homepage": "https://github.com/akira/filament-tool-kit",
-    "support": {
-        "issues": "https://github.com/akira/filament-tool-kit/issues",
-        "source": "https://github.com/akira/filament-tool-kit"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "kid",
-            "email": "kidiatoliny@akira-io.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^8.1",
-        "filament/filament": "^3.0",
-        "laravel/prompts": "^0.1.16",
-        "spatie/laravel-package-tools": "^1.15.0"
-    },
-    "require-dev": {
-        "larastan/larastan": "^2.0",
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^7.9",
-        "orchestra/testbench": "^8.0",
-        "pestphp/pest": "^2.1",
-        "pestphp/pest-plugin-arch": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
-    },
-    "autoload": {
-        "psr-4": {
-            "Akira\\FilamentToolKit\\": "src/",
-            "Akira\\FilamentToolKit\\Database\\Factories\\": "database/factories/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Akira\\FilamentToolKit\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Akira\\FilamentToolKit\\FilamentToolKitServiceProvider"
-            ],
-            "aliases": {
-                "FilamentToolKit": "Akira\\FilamentToolKit\\Facades\\FilamentToolKit"
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "akira/filament-tool-kit",
+  "description": "This is my package filament-tool-kit",
+  "keywords": [
+    "akira",
+    "laravel",
+    "filament-tool-kit"
+  ],
+  "homepage": "https://github.com/akira/filament-tool-kit",
+  "support": {
+    "issues": "https://github.com/akira/filament-tool-kit/issues",
+    "source": "https://github.com/akira/filament-tool-kit"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "kid",
+      "email": "kidiatoliny@akira-io.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "filament/filament": "^3.0",
+    "laravel/prompts": "^0.1.16",
+    "spatie/laravel-package-tools": "^1.15.0"
+  },
+  "require-dev": {
+    "larastan/larastan": "^2.0",
+    "laravel/pint": "^1.0",
+    "nunomaduro/collision": "^7.9",
+    "orchestra/testbench": "^8.0",
+    "pestphp/pest": "^2.1",
+    "pestphp/pest-plugin-arch": "^2.0",
+    "pestphp/pest-plugin-laravel": "^2.0",
+    "phpstan/extension-installer": "^1.1",
+    "phpstan/phpstan-deprecation-rules": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "spatie/laravel-ray": "^1.26"
+  },
+  "autoload": {
+    "psr-4": {
+      "Akira\\FilamentToolKit\\": "src/",
+      "Akira\\FilamentToolKit\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Akira\\FilamentToolKit\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+    "analyse": "vendor/bin/phpstan analyse",
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/pint"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Akira\\FilamentToolKit\\FilamentToolKitServiceProvider"
+      ],
+      "aliases": {
+        "FilamentToolKit": "Akira\\FilamentToolKit\\Facades\\FilamentToolKit"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
