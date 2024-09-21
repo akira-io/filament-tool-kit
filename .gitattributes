@@ -28,3 +28,7 @@
 /UPGRADING.md           export-ignore
 /scripts                export-ignore
 /vendor                 export-ignore
+/.husky                 export-ignore
+commitlint.config.js    export-ignore
+yarn.lock               export-ignore
+bin                     export-ignore
