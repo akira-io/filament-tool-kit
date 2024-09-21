@@ -6,5 +6,10 @@
   "completed_at": "Concluído em",
   "total_rows": "Total de linhas",
   "processed_rows": "Linhas processadas",
-  "successful_rows": "Linhas com sucesso"
+  "successful_rows": "Linhas com sucesso",
+  "phone_number": "Telefone",
+  "emergency_phone": "Telefone de emergência",
+  "address": "Morada",
+  "document_number": "Nº documento",
+  "discount": "Desconto"
 }
