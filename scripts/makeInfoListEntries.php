@@ -81,7 +81,7 @@ final class $className
     {
         return TextEntry::make('$fieldName')
             ->label(__('{$humanReadableKey}'))
-            ->columnSpanFull();
+            ->badge();
     }
 }
 

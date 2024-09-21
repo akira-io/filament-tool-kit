@@ -1,3 +1,7 @@
 {
-  "connection": "Conecção"
+  "connection": "Conecção",
+  "amount": "Montante",
+  "created_at": "Criado em",
+  "closed_date": "Data de fecho",
+  "status": "Estado"
 }

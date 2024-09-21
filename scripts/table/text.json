@@ -1,3 +1,5 @@
 {
-  "amount": "Montante"
+  "amount": "Montante",
+  "confirmed_date": "Data de confirmação",
+  "closed_date": "Data de fecho"
 }

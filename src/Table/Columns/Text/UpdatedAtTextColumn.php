@@ -13,7 +13,7 @@ final class UpdatedAtTextColumn
         return TextColumn::make('updated_at')
             ->label(__('Updated at'))
             ->toggleable(isToggledHiddenByDefault: true)
-            ->date(config('project.date_format'))
+            ->date(config('tool-kit.date_format'))
             ->badge()
             ->color('info')
             ->sortable();

@@ -64,6 +64,7 @@ final class $className
         return DatePicker::make('$fieldName')
             ->label(__('{$humanReadableKey}'))
             ->displayFormat(config('tool-kit.date_format'))
+            ->prefixIcon('heroicon-o-calendar')
             ->native(false);
     }
 }
@@ -85,9 +86,7 @@ final class $className
     {
         return TextInput::make('$fieldName')
             ->label(__('{$humanReadableKey}'))
-            ->required()
-            ->maxLength(191)
-            ->unique(ignoreRecord: true);
+            ->maxLength(191);
     }
 }
 
@@ -107,8 +106,7 @@ final class $className
     public static function make(): Toggle
     {
         return Toggle::make('$fieldName')
-            ->label(__('{$humanReadableKey}'))
-            ->helperText(__('Allow users to log in from a VPN.'));
+            ->label(__('{$humanReadableKey}'));
     }
 }
 

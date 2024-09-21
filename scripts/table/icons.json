@@ -1,3 +1,5 @@
 {
-  "login_successful": "Login com sucesso"
+  "login_successful": "Login com sucesso",
+  "is_confirmed": "Confirmado",
+  "is_open": "Aberto"
 }
