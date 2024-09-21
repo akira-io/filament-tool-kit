@@ -70,5 +70,10 @@
     "Delivered Amount": "Montante entregue",
     "Is Open": "Aberto",
     "Discount": "Desconto",
-    "Price": "Preço"
+    "Price": "Preço",
+    "File Name": "Nome do ficheiro",
+    "File Path": "Caminho do ficheiro",
+    "Total Rows": "Total de linhas",
+    "Processed Rows": "Linhas processadas",
+    "Successful Rows": "Linhas com sucesso"
 }

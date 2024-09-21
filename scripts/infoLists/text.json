@@ -6,5 +6,10 @@
   "status": "Estado",
   "code": "Código",
   "price": "Preço",
-  "discount": "Desconto"
+  "discount": "Desconto",
+  "file_name": "Nome do ficheiro",
+  "file_path": "Caminho do ficheiro",
+  "total_rows": "Total de linhas",
+  "processed_rows": "Linhas processadas",
+  "successful_rows": "Linhas com sucesso"
 }
