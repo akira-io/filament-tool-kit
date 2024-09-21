@@ -75,5 +75,6 @@
     "File Path": "Caminho do ficheiro",
     "Total Rows": "Total de linhas",
     "Processed Rows": "Linhas processadas",
-    "Successful Rows": "Linhas com sucesso"
+    "Successful Rows": "Linhas com sucesso",
+    "Completed At": "Concluído em"
 }

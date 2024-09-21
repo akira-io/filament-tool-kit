@@ -1,5 +1,10 @@
 {
   "amount": "Montante",
   "confirmed_date": "Data de confirmação",
-  "closed_date": "Data de fecho"
+  "closed_date": "Data de fecho",
+  "file_name": "Nome do ficheiro",
+  "completed_at": "Concluído em",
+  "total_rows": "Total de linhas",
+  "processed_rows": "Linhas processadas",
+  "successful_rows": "Linhas com sucesso"
 }

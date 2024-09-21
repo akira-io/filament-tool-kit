@@ -113,13 +113,13 @@ declare(strict_types=1);
 
 namespace $namespace;
 
-use Filament\Forms\Components\TextEntry;use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\TextColumn;
 
 final class $className
 {
     public static function make(): TextColumn
     {
-        return TextEntry::make('$fieldName')
+        return TextColumn::make('$fieldName')
             ->label(__('{$humanReadableKey}'));
     }
 }
