@@ -1,4 +1,5 @@
 {
   "code": "Código",
-  "delivered_amount": "Montante entregue"
+  "delivered_amount": "Montante entregue",
+  "discount": "Desconto"
 }

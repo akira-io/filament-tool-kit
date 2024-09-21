@@ -85,8 +85,7 @@ final class $className
     public static function make(): TextInput
     {
         return TextInput::make('$fieldName')
-            ->label(__('{$humanReadableKey}'))
-            ->maxLength(191);
+            ->label(__('{$humanReadableKey}'));
     }
 }
 
