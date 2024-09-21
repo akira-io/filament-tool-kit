@@ -1,5 +1,8 @@
 {
   "code": "Código",
   "delivered_amount": "Montante entregue",
-  "discount": "Desconto"
+  "discount": "Desconto",
+  "phone_number": "Telefone",
+  "emergency_phone": "Telefone de emergência",
+  "document_number": "Número do documento"
 }

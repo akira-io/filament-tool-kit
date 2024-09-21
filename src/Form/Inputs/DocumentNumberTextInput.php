@@ -6,12 +6,12 @@ namespace Akira\FilamentToolKit\Form\Inputs;
 
 use Filament\Forms\Components\TextInput;
 
-final class PhoneNumberTextInput
+final class DocumentNumberTextInput
 {
     public static function make(): TextInput
     {
-        return TextInput::make('phone_number')
-            ->label(__('Phone Number'))
-            ->tel();
+        return TextInput::make('document_number')
+            ->required()
+            ->label(__('Document Number'));
     }
 }

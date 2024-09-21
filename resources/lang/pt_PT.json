@@ -76,5 +76,14 @@
     "Total Rows": "Total de linhas",
     "Processed Rows": "Linhas processadas",
     "Successful Rows": "Linhas com sucesso",
-    "Completed At": "Concluído em"
+    "Completed At": "Concluído em",
+    "First Name": "Nome",
+    "Last Name": "Apelido",
+    "Document Number": "Nº Documento",
+    "Email": "E-mail",
+    "Phone Number": "Telefone",
+    "Emergency Phone": "Telefone de Emergência",
+    "Address": "Morada",
+    "Updated At": "Atualizado em",
+    "Deleted At": "Apagado em"
 }
