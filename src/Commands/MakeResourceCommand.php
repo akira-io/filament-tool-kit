@@ -4,23 +4,24 @@ declare(strict_types=1);
 
 namespace Akira\FilamentToolKit\Commands;
 
+use Akira\FilamentToolKit\Support\Commands\Concerns\CanGenerateTableColumns;
 use Akira\FilamentToolKit\Support\Commands\Concerns\CanManipulateFiles;
 use Filament\Facades\Filament;
 use Filament\Panel;
 use Filament\Support\Commands\Concerns\CanIndentStrings;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Schema as SchemaFacade;
 
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 
 final class MakeResourceCommand extends Command
 {
+    use CanGenerateTableColumns;
     use CanIndentStrings;
     use CanManipulateFiles;
 
-    public $signature = 'tool-kit:resource{model? : The model name} {--F|force} {--model-namespace=} {--panel=} {--simple} {--multiple }}';
+    public $signature = 'tool-kit:resource{model? : The model name} {--F|force} {--model-namespace=} {--panel=} {--simple} {--multiple } {--generate}}';
 
     public $description = 'generate a new Tool Kit resource';
 
@@ -90,6 +91,7 @@ final class MakeResourceCommand extends Command
         $modelSubNamespace = str($model)->contains('\\') ?
             (string) str($model)->beforeLast('\\') :
             '';
+
         $modelNamespace = $this->option('model-namespace') ?? 'App\\Models';
         $pluralModelClass = (string) str($modelClass)->pluralStudly();
 
@@ -181,8 +183,9 @@ final class MakeResourceCommand extends Command
             'namespace' => $namespace,
             'resource' => $resource,
             'resourceClass' => $resourceClass,
-            'resourceLabel' => ucfirst(str_replace('_', ' ', str($modelClass)->snake())),
-            'resourcePluralLabel' => ucfirst(str_replace('_', ' ', str($pluralModelClass)->snake())),
+            'resourceLabel' => ucfirst(str_replace('_', ' ', (string) str($modelClass)->snake())),
+            'resourcePluralLabel' => ucfirst(str_replace('_', ' ', (string)
+            str($pluralModelClass)->snake())),
         ]);
 
         $listPage = "'index' => List{$pluralModelClass}::route('/'),".PHP_EOL;
@@ -319,5 +322,16 @@ final class MakeResourceCommand extends Command
             'namespace' => "{$namespace}\\{$resourceClass}\\InfoLists",
             'modelClass' => $modelClass,
         ]);
+
+        if ($this->option('generate')) {
+            $tableColumns = $this->generateTableColumns("{$modelNamespace}\\{$modelClass}");
+
+            $this->copyStubToApp('TableColumns', $tableColumnsPath, [
+                'namespace' => "{$namespace}\\{$resourceClass}\\Tables",
+                'fqn' => $this->indentString(implode(PHP_EOL, $this->getTableImportStatements()), 0),
+                'modelClass' => $modelClass,
+                'columns' => $this->indentString($tableColumns, 3),
+            ]);
+        }
     }
 }
