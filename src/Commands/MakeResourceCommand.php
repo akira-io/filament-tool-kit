@@ -6,6 +6,7 @@ namespace Akira\FilamentToolKit\Commands;
 
 use Akira\FilamentToolKit\Support\Commands\Concerns\CanBeGenerated;
 use Akira\FilamentToolKit\Support\Commands\Concerns\CanGenerateFormFields;
+use Akira\FilamentToolKit\Support\Commands\Concerns\CanGenerateInfoListEntries;
 use Akira\FilamentToolKit\Support\Commands\Concerns\CanGenerateTableColumns;
 use Akira\FilamentToolKit\Support\Commands\Concerns\CanManipulateFiles;
 use Akira\FilamentToolKit\Support\Commands\Concerns\InteractsWithGithub;
@@ -22,6 +23,7 @@ final class MakeResourceCommand extends Command
 {
     use CanBeGenerated;
     use CanGenerateFormFields;
+    use CanGenerateInfoListEntries;
     use CanGenerateTableColumns;
     use CanIndentStrings;
     use CanManipulateFiles;
@@ -346,6 +348,15 @@ final class MakeResourceCommand extends Command
                 'fqn' => $this->indentString(implode(PHP_EOL, $this->getFormImportStatements()), 0),
                 'modelClass' => $modelClass,
                 'fields' => $this->indentString($formFields, 3),
+            ]);
+
+            $infoListEntries = $this->generateInfoListEntries("{$modelNamespace}\\{$modelClass}");
+
+            $this->copyStubToApp('InfoListSchema', $infolistSchemaPath, [
+                'namespace' => "{$namespace}\\{$resourceClass}\\InfoLists",
+                'fqn' => $this->indentString(implode(PHP_EOL, $this->getInfoListImportStatements()), 0),
+                'modelClass' => $modelClass,
+                'entries' => $this->indentString($infoListEntries, 3),
             ]);
         }
     }
