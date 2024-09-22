@@ -33,3 +33,4 @@
 /bin                     export-ignore
 /postcss.config.js       export-ignore
 /commitlint.config.cjs    export-ignore
+/.phpunit.cache           export-ignore
