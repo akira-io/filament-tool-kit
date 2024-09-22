@@ -25,10 +25,13 @@ trait CanGenerateTableColumns
 
         foreach ($columns as $column) {
 
-            $tableFqn = $this->findMatchingColumnClass($column, $modelClass);
+            $tableFqn = $this->findTableMatchingColumnClass($column, $modelClass);
+
+            if (in_array($column, ['password'])) {
+                continue;
+            }
 
             if (! $tableFqn) {
-                \Laravel\Prompts\info("No matching column class found for column: {$column}");
 
                 $this->createGitHubIssue($column, 'Table');
 
@@ -43,7 +46,7 @@ trait CanGenerateTableColumns
         return $this->formatColumns($tableColumns);
     }
 
-    private function findMatchingColumnClass(string $columnName, string $modelClass): ?string
+    private function findTableMatchingColumnClass(string $columnName, string $modelClass): ?string
     {
 
         $tableName = $this->getTableFromModel($modelClass);

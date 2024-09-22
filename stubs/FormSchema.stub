@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace {{ namespace }};
 
 use Filament\Forms\Components\Section;
+{{ fqn }}
 
 class {{ modelClass }}FormSchema
 {
@@ -20,7 +21,7 @@ class {{ modelClass }}FormSchema
     private static function getFormSchema(): array
     {
         return [
-            //
+{{ fields }}
         ];
     }
 }
