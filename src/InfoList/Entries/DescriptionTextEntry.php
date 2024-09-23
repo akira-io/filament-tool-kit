@@ -12,6 +12,7 @@ final class DescriptionTextEntry
     {
         return TextEntry::make('description')
             ->label(__('Description'))
-            ->badge();
+            ->html()
+            ->columnSpanFull()->badge(false);
     }
 }

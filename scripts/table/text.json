@@ -15,5 +15,6 @@
   "remember_token": "Token de recordação",
   "summary": "Resumo",
   "url": "URL",
-  "deleted_at": "Eliminado em"
+  "deleted_at": "Eliminado em",
+  "description": "Descrição"
 }

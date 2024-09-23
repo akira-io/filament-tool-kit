@@ -12,6 +12,8 @@ final class SummaryTextEntry
     {
         return TextEntry::make('summary')
             ->label(__('Summary'))
-            ->badge();
+            ->html()
+            ->columnSpanFull()
+            ->badge(false);
     }
 }

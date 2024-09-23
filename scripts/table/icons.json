@@ -1,5 +1,7 @@
 {
   "login_successful": "Login com sucesso",
   "is_confirmed": "Confirmado",
-  "is_open": "Aberto"
+  "is_open": "Aberto",
+  "is_active": "Ativo",
+  "is_open_source": "Open Source"
 }

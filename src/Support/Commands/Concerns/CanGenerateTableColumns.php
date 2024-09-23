@@ -55,7 +55,7 @@ trait CanGenerateTableColumns
 
         $className = $this->getClassName($columnName);
 
-        if ($columnType === 'boolean') {
+        if ($columnType === 'tinyint') {
             $className .= 'ToggleColumn';
             $namespace = 'Akira\\FilamentToolKit\\Table\\Columns\\Toggles\\';
         } else {

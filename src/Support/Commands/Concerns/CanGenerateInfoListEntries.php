@@ -55,7 +55,7 @@ trait CanGenerateInfoListEntries
 
         $className = $this->getClassName($columnName);
 
-        if ($columnType === 'boolean') {
+        if ($columnType === 'tinyint') {
             $className .= 'IconEntry';
             $namespace = 'Akira\\FilamentToolKit\\InfoList\\Entries\\';
         } else {

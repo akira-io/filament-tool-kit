@@ -55,12 +55,15 @@ trait CanGenerateFormFields
 
         $className = $this->getClassName($columnName);
 
-        if ($columnType === 'boolean') {
+        if ($columnType === 'tinyint') {
             $className .= 'Toggle';
             $namespace = 'Akira\\FilamentToolKit\\Form\\Toggles\\';
         } elseif ($columnType === 'date') {
             $className .= 'DatePicker';
             $namespace = 'Akira\\FilamentToolKit\\Form\\DatePickers\\';
+        } elseif ($columnType === 'text') {
+            $className .= 'TextArea';
+            $namespace = 'Akira\\FilamentToolKit\\Form\\Textareas\\';
         } else {
             $className .= 'TextInput';
             $namespace = 'Akira\\FilamentToolKit\\Form\\Inputs\\';
