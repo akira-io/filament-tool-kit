@@ -1,5 +1,16 @@
 
 
+## [1.4.0](https://github.com/akira-io/filament-tool-kit/compare/1.3.0...1.4.0) (2024-09-23)
+
+
+### Features
+
+* add IdTextEntry class ([5cb897b](https://github.com/akira-io/filament-tool-kit/commit/5cb897b190f848d53fea2af5b5820e692db6a4d3))
+* add info list entries generation ([4d3ad89](https://github.com/akira-io/filament-tool-kit/commit/4d3ad89193ae8c1a01a7970927d8a62d5b5ae3e2))
+* add RememberTokenTextColumn ([0d35d46](https://github.com/akira-io/filament-tool-kit/commit/0d35d469871a748a6d09f335afa1ce6b2b280faf))
+* add table column generation functionality ([c9011f3](https://github.com/akira-io/filament-tool-kit/commit/c9011f30de6260ad47f231cc55d89d52d36a4ec6))
+* implement form field generation ([9d9b839](https://github.com/akira-io/filament-tool-kit/commit/9d9b839908ff0facdfc167678352cbfe83ff1c1b))
+
 ## [1.3.0](https://github.com/akira-io/filament-tool-kit/compare/1.2.0...1.3.0) (2024-09-21)
 
 
