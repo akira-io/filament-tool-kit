@@ -27,7 +27,7 @@ trait CanGenerateFormFields
 
             $tableFqn = $this->findFormMatchingColumnClass($column, $modelClass);
 
-            if (in_array($column, ['id', 'created_at', 'updated_at', 'remember_token', 'email_verified_at'])) {
+            if (in_array($column, ['id', 'created_at', 'updated_at', 'remember_token', 'email_verified_at', 'deleted_at'])) {
                 continue;
             }
 
