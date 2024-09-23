@@ -1,5 +1,24 @@
 
 
+## [1.5.0](https://github.com/akira-io/filament-tool-kit/compare/1.4.0...1.5.0) (2024-09-23)
+
+
+### Features
+
+* add IsOpenSourceToggle component ([960d1b7](https://github.com/akira-io/filament-tool-kit/commit/960d1b7271ab1dc641b0282cf0dbe613421ded25))
+* add new table columns and update translations ([b0d7d04](https://github.com/akira-io/filament-tool-kit/commit/b0d7d04ce066483e644db6870d50eea227395335))
+* add RichEditor component ([580687e](https://github.com/akira-io/filament-tool-kit/commit/580687eb824573b326b29e3f788b38be1be045d7))
+* add SummaryTextArea component ([7384910](https://github.com/akira-io/filament-tool-kit/commit/7384910c8412076a10f1c94a1a2f24f5f90bf302))
+* add SummaryTextColumn class ([642111f](https://github.com/akira-io/filament-tool-kit/commit/642111fc7964d2a44033f272954ea693d85410f8))
+* add SummaryTextColumn class ([e76a613](https://github.com/akira-io/filament-tool-kit/commit/e76a613d7537bfa60258c88066e119ecfe3b4a3f))
+* add text and icon entries for InfoList ([85a7007](https://github.com/akira-io/filament-tool-kit/commit/85a7007413bb30540b4b927239eacce93230ebdd))
+* add UrlTextInput component ([0b092f9](https://github.com/akira-io/filament-tool-kit/commit/0b092f9f64d5ca448899a1c4709286d4a95512d5))
+
+
+### Bug Fixes
+
+* exclude deleted_at column in form field generation ([11ef3ad](https://github.com/akira-io/filament-tool-kit/commit/11ef3ade5fc9c56f70acb82bc89361bd977e2430))
+
 ## [1.4.0](https://github.com/akira-io/filament-tool-kit/compare/1.3.0...1.4.0) (2024-09-23)
 
 
