@@ -14,5 +14,6 @@
   "successful_rows": "Linhas com sucesso",
   "email": "E-mail",
   "emergency_phone": "Telefone de emergência",
-  "address": "Morada"
+  "address": "Morada",
+  "id": "Id"
 }

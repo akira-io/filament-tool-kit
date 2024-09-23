@@ -86,5 +86,6 @@
     "Address": "Morada",
     "Updated At": "Atualizado em",
     "Deleted At": "Apagado em",
-    "Remember Token": "Token de recordação"
+    "Remember Token": "Token de recordação",
+    "Id": "Id"
 }
