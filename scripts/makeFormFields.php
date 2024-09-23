@@ -90,6 +90,26 @@ final class $className
 }
 
 PHP;
+        } elseif ($componentType === 'TextArea') {
+            $skeletonContent = <<<PHP
+<?php
+
+declare(strict_types=1);
+
+namespace $namespace;
+
+use Filament\Forms\Components\Textarea;
+
+final class $className
+{
+    public static function make(): Textarea
+    {
+        return Textarea::make('$fieldName')
+            ->label(__('{$humanReadableKey}'));
+    }
+}
+
+PHP;
         } elseif ($componentType === 'Toggle') {
             $skeletonContent = <<<PHP
 <?php
@@ -184,8 +204,16 @@ $createdFileUploads = generateFormComponents(
     $translationFilePath
 );
 
+$createTextArea = generateFormComponents(
+    'TextArea',
+    __DIR__.'/form/textarea.json',
+    'Akira\\FilamentToolKit\\Form\\Textareas',
+    __DIR__.'/../src/Form/Textareas',
+    $translationFilePath
+);
+
 // Show logs with created resources
-$createdResources = array_merge($createdDatePickers, $createdTextInputs, $createdToggles, $createdFileUploads);
+$createdResources = array_merge($createdDatePickers, $createdTextInputs, $createdToggles, $createdFileUploads, $createTextArea);
 if (! empty($createdResources)) {
     echo "Created resources:\n".implode("\n", $createdResources);
 } else {
