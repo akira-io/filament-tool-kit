@@ -4,5 +4,6 @@
   "discount": "Desconto",
   "phone_number": "Telefone",
   "emergency_phone": "Telefone de emergência",
-  "document_number": "Número do documento"
+  "document_number": "Número do documento",
+  "url": "URL"
 }
