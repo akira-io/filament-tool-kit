@@ -14,5 +14,6 @@
   "discount": "Desconto",
   "remember_token": "Token de recordação",
   "summary": "Resumo",
-  "url": "URL"
+  "url": "URL",
+  "deleted_at": "Eliminado em"
 }

@@ -44,7 +44,7 @@ function generateColumns(
         }
 
         // Check for the specific class name for the new skeleton
-        if ($columnType === 'Toggle' && $fieldName === 'is_active') {
+        if ($columnType === 'Toggle') {
             $skeletonContent = <<<PHP
 <?php
 
@@ -58,8 +58,8 @@ final class $className
 {
     public static function make(): ToggleColumn
     {
-        return ToggleColumn::make('is_active')
-            ->label(__('Inactive/Active'));
+        return ToggleColumn::make('$fieldName')
+               ->label(__('{$humanReadableKey}'));
     }
 }
 
