@@ -90,6 +90,28 @@ final class $className
 }
 
 PHP;
+        } elseif ($componentType === 'Select') {
+            $skeletonContent = <<<PHP
+<?php
+
+declare(strict_types=1);
+
+namespace $namespace;
+
+use Filament\Forms\Components\Select;use Filament\Forms\Components\TextInput;
+
+final class $className
+{
+    public static function make(): Select
+    {
+        return Select::make('$fieldName')
+            ->searchable()
+            ->preload()
+            ->label(__('{$humanReadableKey}'));
+    }
+}
+
+PHP;
         } elseif ($componentType === 'TextArea') {
             $skeletonContent = <<<PHP
 <?php
@@ -238,6 +260,14 @@ $createRichEditor = generateFormComponents(
     __DIR__.'/form/rich-editors.json',
     'Akira\\FilamentToolKit\\Form\\RichEditors',
     __DIR__.'/../src/Form/RichEditors',
+    $translationFilePath
+);
+
+$createSelects = generateFormComponents(
+    'Select',
+    __DIR__.'/form/selects.json',
+    'Akira\\FilamentToolKit\\Form\\Selects',
+    __DIR__.'/../src/Form/Selects',
     $translationFilePath
 );
 
