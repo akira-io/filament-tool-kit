@@ -1,4 +1,5 @@
 {
   "is_active": "Ativo/Inativo",
-  "is_open": "Aberto"
+  "is_open": "Aberto",
+  "is_open_source": "Open Source"
 }
