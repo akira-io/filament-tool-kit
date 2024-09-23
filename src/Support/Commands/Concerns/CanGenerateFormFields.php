@@ -64,6 +64,10 @@ trait CanGenerateFormFields
         } elseif ($columnType === 'text') {
             $className .= 'TextArea';
             $namespace = 'Akira\\FilamentToolKit\\Form\\Textareas\\';
+
+        } elseif ($columnType === 'integer') {
+            $className .= 'Select';
+            $namespace = 'Akira\\FilamentToolKit\\Form\\Selects\\';
         } else {
             $className .= 'TextInput';
             $namespace = 'Akira\\FilamentToolKit\\Form\\Inputs\\';
