@@ -11,5 +11,6 @@
   "emergency_phone": "Telefone de emergência",
   "address": "Morada",
   "document_number": "Nº documento",
-  "discount": "Desconto"
+  "discount": "Desconto",
+  "remember_token": "Token de recordação"
 }
