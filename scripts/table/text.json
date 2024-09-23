@@ -13,5 +13,6 @@
   "document_number": "Nº documento",
   "discount": "Desconto",
   "remember_token": "Token de recordação",
-  "summary": "Resumo"
+  "summary": "Resumo",
+  "url": "URL"
 }
