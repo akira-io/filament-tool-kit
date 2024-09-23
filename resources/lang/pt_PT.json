@@ -90,5 +90,6 @@
     "Id": "Id",
     "Summary": "Resumo",
     "Url": "URL",
-    "Is Open Source": "Open Source"
+    "Is Open Source": "Open Source",
+    "Description": "Descrição"
 }

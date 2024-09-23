@@ -130,6 +130,27 @@ final class $className
 }
 
 PHP;
+        } elseif ($componentType === 'RichEditor') {
+            $skeletonContent = <<<PHP
+<?php
+
+declare(strict_types=1);
+
+namespace $namespace;
+
+use Filament\Forms\Components\RichEditor;use Filament\Forms\Components\Toggle;
+
+final class $className
+{
+    public static function make(): RichEditor
+    {
+        return RichEditor::make('$fieldName')
+            ->label(__('{$humanReadableKey}'));
+    }
+   
+}
+
+PHP;
         } elseif ($componentType === 'FileUpload') {
             $skeletonContent = <<<PHP
 <?php
@@ -212,8 +233,17 @@ $createTextArea = generateFormComponents(
     $translationFilePath
 );
 
+$createRichEditor = generateFormComponents(
+    'RichEditor',
+    __DIR__.'/form/rich-editors.json',
+    'Akira\\FilamentToolKit\\Form\\RichEditors',
+    __DIR__.'/../src/Form/RichEditors',
+    $translationFilePath
+);
+
 // Show logs with created resources
-$createdResources = array_merge($createdDatePickers, $createdTextInputs, $createdToggles, $createdFileUploads, $createTextArea);
+$createdResources = array_merge($createdDatePickers, $createdTextInputs,
+    $createdToggles, $createdFileUploads, $createTextArea, $createRichEditor);
 if (! empty($createdResources)) {
     echo "Created resources:\n".implode("\n", $createdResources);
 } else {
