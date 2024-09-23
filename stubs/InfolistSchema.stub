@@ -6,6 +6,7 @@ namespace {{ namespace }};
 
 use Akira\FilamentToolKit\InfoList\Entries\CreatedAtTextEntry;
 use Akira\FilamentToolKit\InfoList\Entries\UpdatedAtTextEntry;
+{{ fqn }}
 
 use Filament\Infolists\Components\Section;
 
@@ -48,7 +49,7 @@ class {{ modelClass }}InfoListSchema
     private static function getInformationSectionSchema(): array
     {
         return [
-            //
+{{ entries }}
         ];
     }
 }

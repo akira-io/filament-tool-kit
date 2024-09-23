@@ -12,7 +12,7 @@ trait InteractsWithGithub
     ): void {
 
         // Add the prefix to the title if provided
-        $title = "{$prefix} Missing Column Class: {$columnName}";
+        $title = "{$prefix} Missing Class: {$columnName}";
         $body = "No matching  class found for  {$prefix} column: {$columnName}";
 
         // Generate the issue URL
