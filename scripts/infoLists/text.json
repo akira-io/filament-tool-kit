@@ -15,5 +15,9 @@
   "email": "E-mail",
   "emergency_phone": "Telefone de emergência",
   "address": "Morada",
-  "id": "Id"
+  "id": "Id",
+  "summary": "Resumo",
+  "description": "Descrição",
+  "url": "Url",
+  "deleted_at": "Eliminado em"
 }
