@@ -31,18 +31,18 @@ class {{ modelClass }}InfoListSchema
     private static function getInformationSection(): Section
     {
         return Section::make()
-            ->description(__(' {{ modelClass }} Information'))
+           // ->description(__(' {{ modelClass }} Information'))
             ->schema(self::getInformationSectionSchema())
-            ->columnSpan(1)
+            ->columnSpan(3)
             ->columns(3);
     }
 
     private static function getTimeStampsSection(): Section
     {
         return Section::make()
-            ->description(__('Timestamps'))
+           // ->description(__('Timestamps'))
             ->schema(self::getTimeStampsSectionSchema())
-            ->columns()
+            ->columns(1)
             ->columnSpan(1);
     }
 

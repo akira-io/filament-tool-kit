@@ -11,6 +11,7 @@ class {{ modelClass }}InfoList
     public static function make(Infolist $infolist): Infolist
     {
         return $infolist
-                   ->schema({{ modelClass }}InfoListSchema::make());
+                   ->schema({{ modelClass }}InfoListSchema::make())
+                   ->columns(4);
     }
 }
