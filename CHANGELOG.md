@@ -1,5 +1,12 @@
 
 
+## [1.7.1](https://github.com/akira-io/filament-tool-kit/compare/1.7.0...1.7.1) (2024-09-24)
+
+
+### Bug Fixes
+
+* handle longText column type in form field generation ([2b02bc8](https://github.com/akira-io/filament-tool-kit/commit/2b02bc84467af2218147b1782a4eebefe39e035a))
+
 ## [1.7.0](https://github.com/akira-io/filament-tool-kit/compare/1.6.0...1.7.0) (2024-09-24)
 
 
