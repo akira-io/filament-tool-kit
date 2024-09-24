@@ -61,7 +61,7 @@ trait CanGenerateFormFields
         } elseif ($columnType === 'date') {
             $className .= 'DatePicker';
             $namespace = 'Akira\\FilamentToolKit\\Form\\DatePickers\\';
-        } elseif ($columnType === 'text' || $columnType === 'longText') {
+        } elseif ($columnType === 'text' || $columnType === 'longtext') {
             $className .= 'TextArea';
             $namespace = 'Akira\\FilamentToolKit\\Form\\Textareas\\';
 

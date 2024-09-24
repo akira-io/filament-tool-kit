@@ -160,7 +160,7 @@ declare(strict_types=1);
 
 namespace $namespace;
 
-use Filament\Forms\Components\RichEditor;use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\RichEditor;
 
 final class $className
 {
