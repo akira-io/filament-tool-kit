@@ -1,5 +1,12 @@
 
 
+## [1.7.0](https://github.com/akira-io/filament-tool-kit/compare/1.6.0...1.7.0) (2024-09-24)
+
+
+### Features
+
+* add copyable and HTML features to text columns ([4c02a6b](https://github.com/akira-io/filament-tool-kit/commit/4c02a6bfbe69e28d3ea379fb868041574637ec87))
+
 ## [1.6.0](https://github.com/akira-io/filament-tool-kit/compare/1.5.0...1.6.0) (2024-09-24)
 
 
