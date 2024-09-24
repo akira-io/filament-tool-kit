@@ -4,7 +4,7 @@ namespace {{ namespace }};
 
 {{ clusterImport }}use Filament\Pages\Page;
 
-class {{ class }} extends Page
+final class {{ class }} extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 

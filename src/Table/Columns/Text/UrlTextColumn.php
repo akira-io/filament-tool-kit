@@ -13,6 +13,7 @@ final class UrlTextColumn
         return TextColumn::make('url')
             ->copyMessage(__('URL copied to clipboard'))
             ->copyable()
+            ->badge()
             ->label(__('Url'));
     }
 }

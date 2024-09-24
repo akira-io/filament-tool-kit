@@ -17,7 +17,7 @@ use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
 
-class {{ resourceClass }} extends Resource
+final class {{ resourceClass }} extends Resource
 {
     protected static ?string $model = {{ modelClass }}::class;
 

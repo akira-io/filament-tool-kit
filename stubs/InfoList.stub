@@ -6,7 +6,7 @@ namespace {{ namespace }};
 
 use Filament\Infolists\Infolist;
 
-class {{ modelClass }}InfoList
+final class {{ modelClass }}InfoList
 {
     public static function make(Infolist $infolist): Infolist
     {

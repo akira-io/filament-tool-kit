@@ -7,7 +7,7 @@ namespace {{ namespace }};
 use Filament\Forms\Components\Section;
 {{ fqn }}
 
-class {{ modelClass }}FormSchema
+final class {{ modelClass }}FormSchema
 {
     public static function make(): array
     {

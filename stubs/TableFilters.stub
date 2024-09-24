@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-class {{ modelClass }}TableFilters
+final class {{ modelClass }}TableFilters
 {
     public static function make(): array
     {

@@ -6,7 +6,7 @@ namespace {{ namespace }};
 
 use Filament\Forms\Form;
 
-class {{ modelClass }}Form
+final class {{ modelClass }}Form
 {
     public static function make(Form $form): Form
     {

@@ -10,7 +10,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class {{ managerClass }} extends RelationManager
+final class {{ managerClass }} extends RelationManager
 {
     protected static string $relationship = '{{ relationship }}';
 

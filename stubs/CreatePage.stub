@@ -8,7 +8,7 @@ use {{ resource }}\{{ resourceClass }};
 use Filament\Actions;
 use {{ baseResourcePage }};
 
-class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
+final class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
 {
     protected static string $resource = {{ resourceClass }}::class;
 }

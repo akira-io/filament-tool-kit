@@ -9,7 +9,7 @@ use Filament\Actions;
 use {{ baseResourcePage }};
 use {{ namespace }}\Actions\Pages\{{ modelClass }}EditHeaderAction;
 
-class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
+final class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
 {
     protected static string $resource = {{ resourceClass }}::class;
 

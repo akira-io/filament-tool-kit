@@ -7,7 +7,7 @@ namespace {{ namespace }};
 use Filament\Tables\Table;
 
 
-class {{ modelClass }}Table
+final class {{ modelClass }}Table
 {
     public static function make(Table $table): Table
     {

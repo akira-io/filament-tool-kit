@@ -9,7 +9,7 @@ use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\RestoreAction;
 
-class {{ modelClass }}TableActions
+final class {{ modelClass }}TableActions
 {
     public static function make(): array
     {

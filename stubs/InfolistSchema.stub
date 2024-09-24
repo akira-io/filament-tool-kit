@@ -10,7 +10,7 @@ use Akira\FilamentToolKit\InfoList\Entries\UpdatedAtTextEntry;
 
 use Filament\Infolists\Components\Section;
 
-class {{ modelClass }}InfoListSchema
+final class {{ modelClass }}InfoListSchema
 {
     public static function make(): array
     {

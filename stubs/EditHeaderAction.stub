@@ -8,7 +8,7 @@ use {{ namespace }}\Forms\{{ modelClass }}Form;
 use Filament\Actions\EditAction;
 use Filament\Forms\Form;
 
-class {{ modelClass }}EditHeaderAction
+final class {{ modelClass }}EditHeaderAction
 {
     public static function make(): EditAction
     {

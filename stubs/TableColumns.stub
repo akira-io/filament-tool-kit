@@ -6,7 +6,7 @@ namespace {{ namespace }};
 
 {{ fqn }}
 
-class {{ modelClass }}TableColumns
+final class {{ modelClass }}TableColumns
 {
     public static function make(): array
     {

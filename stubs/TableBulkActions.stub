@@ -8,7 +8,7 @@ use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\RestoreBulkAction;
 
-class {{ modelClass }}TableBulkActions
+final class {{ modelClass }}TableBulkActions
 {
     public static function make(): array
     {
