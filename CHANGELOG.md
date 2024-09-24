@@ -1,5 +1,13 @@
 
 
+## [1.9.0](https://github.com/akira-io/filament-tool-kit/compare/1.8.0...1.9.0) (2024-09-24)
+
+
+### Features
+
+* add visibility setting to text columns ([790e335](https://github.com/akira-io/filament-tool-kit/commit/790e3355ac8199db13622bbe927a76e90ca5c90f))
+* make classes final and add badge to URL text column ([502d372](https://github.com/akira-io/filament-tool-kit/commit/502d3720da05b15a31512b01c0c24b79626eb28c))
+
 ## [1.8.0](https://github.com/akira-io/filament-tool-kit/compare/1.7.1...1.8.0) (2024-09-24)
 
 
