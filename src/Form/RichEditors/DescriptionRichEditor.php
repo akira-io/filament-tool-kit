@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Akira\FilamentToolKit\Form\RichEditors;
 
-use Filament\Forms\Components\RichEditor;use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\RichEditor;
 
 final class DescriptionRichEditor
 {
@@ -13,5 +13,4 @@ final class DescriptionRichEditor
         return RichEditor::make('description')
             ->label(__('Description'));
     }
-   
 }
