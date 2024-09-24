@@ -1,5 +1,16 @@
 
 
+## [1.6.0](https://github.com/akira-io/filament-tool-kit/compare/1.5.0...1.6.0) (2024-09-24)
+
+
+### Features
+
+* add new text and icon column classes ([61d5905](https://github.com/akira-io/filament-tool-kit/commit/61d590544c0b327a73ae3679a86da9187915ba07))
+* add ProjectNameTextColumn and ProjectNameTextEntry ([d166504](https://github.com/akira-io/filament-tool-kit/commit/d166504d39b3c70484a3e5c20c7a05e73214bd35))
+* add support for ProjectGroupIdSelect component ([2069a3e](https://github.com/akira-io/filament-tool-kit/commit/2069a3e4d6f40c5cc9c45087918390d87d70d33b))
+* add support for Select components ([4d12f50](https://github.com/akira-io/filament-tool-kit/commit/4d12f50c479fbbe85c22339effd3cdd2e1f7e4ad))
+* update column type mappings and text entries ([48fd12a](https://github.com/akira-io/filament-tool-kit/commit/48fd12a0c3d372b27e7797ace0834a0a25051375))
+
 ## [1.5.0](https://github.com/akira-io/filament-tool-kit/compare/1.4.0...1.5.0) (2024-09-23)
 
 
