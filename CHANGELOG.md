@@ -1,5 +1,12 @@
 
 
+## [1.8.0](https://github.com/akira-io/filament-tool-kit/compare/1.7.1...1.8.0) (2024-09-24)
+
+
+### Features
+
+* add SummaryRichEditor class and update configurations ([3fff572](https://github.com/akira-io/filament-tool-kit/commit/3fff57208776dce2263ca5aae0707e4187c105b5))
+
 ## [1.7.1](https://github.com/akira-io/filament-tool-kit/compare/1.7.0...1.7.1) (2024-09-24)
 
 
