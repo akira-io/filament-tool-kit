@@ -12,6 +12,8 @@ final class SummaryTextColumn
     {
         return TextColumn::make('summary')
             ->label(__('Summary'))
+            ->visibleFrom('md')
+            ->html()
             ->limit();
     }
 }

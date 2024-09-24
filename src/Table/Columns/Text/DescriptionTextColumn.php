@@ -12,6 +12,7 @@ final class DescriptionTextColumn
     {
         return TextColumn::make('description')
             ->label(__('Description'))
+            ->visibleFrom('md')
             ->html()
             ->limit();
     }
