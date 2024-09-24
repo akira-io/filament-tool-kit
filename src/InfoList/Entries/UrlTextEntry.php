@@ -12,6 +12,8 @@ final class UrlTextEntry
     {
         return TextEntry::make('url')
             ->label(__('Url'))
+            ->copyable()
+            ->copyMessage(__('URL copied to clipboard'))
             ->badge();
     }
 }

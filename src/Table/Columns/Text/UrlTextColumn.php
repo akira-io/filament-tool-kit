@@ -11,6 +11,8 @@ final class UrlTextColumn
     public static function make(): TextColumn
     {
         return TextColumn::make('url')
+            ->copyMessage(__('URL copied to clipboard'))
+            ->copyable()
             ->label(__('Url'));
     }
 }
