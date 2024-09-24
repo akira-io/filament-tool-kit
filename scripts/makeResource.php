@@ -11,12 +11,12 @@ require __DIR__.'/makeInfoListEntries.php';
 
 function convertToPascalCase($fieldName): array|string
 {
-    return str_replace(' ', '', ucwords(str_replace('_', ' ', $fieldName)));
+    return str_replace(' ', '', ucwords(str_replace(['.', '_'], ' ', $fieldName)));
 }
 
 function convertToHumanReadable($fieldName): string
 {
     $fieldName = preg_replace('/_id$/', '', $fieldName);
 
-    return ucwords(str_replace('_', ' ', $fieldName));
+    return ucwords(str_replace(['.', '_'], ' ', $fieldName));
 }

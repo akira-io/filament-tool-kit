@@ -27,7 +27,8 @@ trait CanGenerateTableColumns
 
             $tableFqn = $this->findTableMatchingColumnClass($column, $modelClass);
 
-            if (in_array($column, ['password'])) {
+            if (in_array($column, ['password']) || str_ends_with($column, '_id')
+            ) {
                 continue;
             }
 

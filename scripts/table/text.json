@@ -16,5 +16,6 @@
   "summary": "Resumo",
   "url": "URL",
   "deleted_at": "Eliminado em",
-  "description": "Descrição"
+  "description": "Descrição",
+  "project.name": "Nome do projeto"
 }
