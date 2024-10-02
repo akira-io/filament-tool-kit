@@ -18,5 +18,10 @@
   "deleted_at": "Eliminado em",
   "description": "Descrição",
   "project.name": "Nome do projeto",
-  "iso2": "ISO2"
+  "iso2": "ISO2",
+  "first_name": "Nome",
+  "last_name": "Apelido",
+  "phone": "Telefone",
+  "birth_date": "Data de nascimento",
+  "occupation": "Profissão"
 }
