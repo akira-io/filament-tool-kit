@@ -20,5 +20,6 @@
   "description": "Descrição",
   "url": "Url",
   "deleted_at": "Eliminado em",
-  "project.name": "Nome do projeto"
+  "project.name": "Nome do projeto",
+  "iso2": "ISO2"
 }
