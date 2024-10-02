@@ -1,5 +1,17 @@
 
 
+## [1.10.0](https://github.com/akira-io/filament-tool-kit/compare/1.9.0...1.10.0) (2024-10-02)
+
+
+### Features
+
+* add BirthDateTextEntry component and related translations ([64bb551](https://github.com/akira-io/filament-tool-kit/commit/64bb551f27886cbd374644d1921776f623a404de))
+* add multiple TextColumn components and translations ([48fdcd2](https://github.com/akira-io/filament-tool-kit/commit/48fdcd290e3705f2ec4b03afa78b97ccbc1d821c))
+* add new Form components and update translations ([adb90ad](https://github.com/akira-io/filament-tool-kit/commit/adb90addc04771094faafb129c140e1885cde49e))
+* add OccupationTextEntry component and new translations ([0df6984](https://github.com/akira-io/filament-tool-kit/commit/0df69844e2415d09e75843cfd0b24cc7df5861a2))
+* add text entry components and update translations ([0370b9e](https://github.com/akira-io/filament-tool-kit/commit/0370b9e89eaae612985610060574bb2ea2ab5be5))
+* introduce ISO2 text components and translations ([84adf1a](https://github.com/akira-io/filament-tool-kit/commit/84adf1ab514526ad110627b7fd49b31b2cfd9703))
+
 ## [1.9.0](https://github.com/akira-io/filament-tool-kit/compare/1.8.0...1.9.0) (2024-09-24)
 
 
