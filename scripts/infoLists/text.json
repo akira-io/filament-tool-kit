@@ -22,5 +22,6 @@
   "deleted_at": "Eliminado em",
   "project.name": "Nome do projeto",
   "iso2": "ISO2",
-  "birth_date": "Data de nascimento"
+  "birth_date": "Data de nascimento",
+  "occupation": "Profissão"
 }
