@@ -11,6 +11,7 @@ final class FirstNameTextInput
     public static function make(): TextInput
     {
         return TextInput::make('first_name')
-            ->label(__('First Name'));
+            ->label(__('First Name'))
+            ->required();
     }
 }
