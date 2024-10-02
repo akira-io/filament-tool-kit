@@ -23,5 +23,8 @@
   "project.name": "Nome do projeto",
   "iso2": "ISO2",
   "birth_date": "Data de nascimento",
-  "occupation": "Profissão"
+  "occupation": "Profissão",
+  "first_name": "Nome",
+  "last_name": "Apelido",
+  "phone": "Telefone"
 }
