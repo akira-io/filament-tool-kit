@@ -26,5 +26,6 @@
   "occupation": "Profissão",
   "first_name": "Nome",
   "last_name": "Apelido",
-  "phone": "Telefone"
+  "phone": "Telefone",
+  "gender_id": "Género"
 }
