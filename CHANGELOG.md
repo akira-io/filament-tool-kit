@@ -1,5 +1,7 @@
 
 
+## [1.10.1](https://github.com/akira-io/filament-tool-kit/compare/1.10.0...1.10.1) (2024-10-02)
+
 ## [1.10.0](https://github.com/akira-io/filament-tool-kit/compare/1.9.0...1.10.0) (2024-10-02)
 
 
