@@ -6,5 +6,10 @@
   "emergency_phone": "Telefone de emergência",
   "document_number": "Número do documento",
   "url": "URL",
-  "iso2": "ISO2"
+  "iso2": "ISO2",
+  "first_name": "Nome",
+  "last_name": "Apelido",
+  "phone": "Telefone",
+  "address": "Morada",
+  "occupation": "Profissão"
 }
