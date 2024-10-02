@@ -1,5 +1,12 @@
 
 
+## [1.11.0](https://github.com/akira-io/filament-tool-kit/compare/1.10.1...1.11.0) (2024-10-02)
+
+
+### Features
+
+* add gender ID column and text entry ([d4b9ea5](https://github.com/akira-io/filament-tool-kit/commit/d4b9ea5d6ecc7373013a52ff8592d4e3a5890420))
+
 ## [1.10.1](https://github.com/akira-io/filament-tool-kit/compare/1.10.0...1.10.1) (2024-10-02)
 
 ## [1.10.0](https://github.com/akira-io/filament-tool-kit/compare/1.9.0...1.10.0) (2024-10-02)
