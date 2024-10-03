@@ -11,6 +11,7 @@ final class IpAddressTextEntry
     public static function make(): TextEntry
     {
         return TextEntry::make('ip_address')
-            ->label(__('IP address'));
+            ->label(__('IP address'))
+            ->copyable();
     }
 }

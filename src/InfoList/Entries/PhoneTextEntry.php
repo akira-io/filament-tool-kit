@@ -12,6 +12,7 @@ final class PhoneTextEntry
     {
         return TextEntry::make('phone')
             ->label(__('Phone'))
+            ->copyable()
             ->badge();
     }
 }

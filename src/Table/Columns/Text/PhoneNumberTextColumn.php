@@ -12,6 +12,7 @@ final class PhoneNumberTextColumn
     {
         return TextColumn::make('phone_number')
             ->label(__('Phone Number'))
+            ->copyable()
             ->searchable();
     }
 }

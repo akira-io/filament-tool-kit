@@ -12,6 +12,7 @@ final class EmailTextEntry
     {
         return TextEntry::make('email')
             ->label(__('E-mail'))
+            ->copyable()
             ->badge();
     }
 }

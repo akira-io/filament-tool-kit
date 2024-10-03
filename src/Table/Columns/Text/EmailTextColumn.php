@@ -12,6 +12,7 @@ final class EmailTextColumn
     {
         return TextColumn::make('email')
             ->label(__('E-mail'))
+            ->copyable()
             ->sortable()
             ->searchable()
             ->badge();
