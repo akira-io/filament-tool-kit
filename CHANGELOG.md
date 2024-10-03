@@ -1,5 +1,12 @@
 
 
+## [1.12.0](https://github.com/akira-io/filament-tool-kit/compare/1.11.0...1.12.0) (2024-10-03)
+
+
+### Features
+
+* add specialty column and input ([667af56](https://github.com/akira-io/filament-tool-kit/commit/667af56940dddf2f6d78f1fd8e41f1e76c96da7a))
+
 ## [1.11.0](https://github.com/akira-io/filament-tool-kit/compare/1.10.1...1.11.0) (2024-10-02)
 
 
