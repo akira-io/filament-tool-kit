@@ -6,11 +6,11 @@ namespace Akira\FilamentToolKit\Table\Columns\Text;
 
 use Filament\Tables\Columns\TextColumn;
 
-final class SpecialtyTextColumn
+final class SpecialityTextColumn
 {
     public static function make(): TextColumn
     {
-        return TextColumn::make('specialty')
-            ->label(__('Specialty'));
+        return TextColumn::make('speciality')
+            ->label(__('Speciality'));
     }
 }

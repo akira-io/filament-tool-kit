@@ -6,12 +6,12 @@ namespace Akira\FilamentToolKit\InfoList\Entries;
 
 use Filament\Infolists\Components\TextEntry;
 
-final class SpecialtyTextEntry
+final class SpecialityTextEntry
 {
     public static function make(): TextEntry
     {
-        return TextEntry::make('specialty')
-            ->label(__('Specialty'))
+        return TextEntry::make('speciality')
+            ->label(__('Speciality'))
             ->badge();
     }
 }
