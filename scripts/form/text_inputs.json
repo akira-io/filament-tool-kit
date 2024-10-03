@@ -11,5 +11,6 @@
   "last_name": "Apelido",
   "phone": "Telefone",
   "address": "Morada",
-  "occupation": "Profissão"
+  "occupation": "Profissão",
+  "specialty": "Especialidade"
 }

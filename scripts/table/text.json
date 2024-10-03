@@ -24,5 +24,6 @@
   "phone": "Telefone",
   "birth_date": "Data de nascimento",
   "occupation": "Profissão",
-  "gender_id": "Género"
+  "gender_id": "Género",
+  "specialty": "Especialidade"
 }
