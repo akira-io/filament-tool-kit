@@ -1,5 +1,17 @@
 
 
+## [1.13.0](https://github.com/akira-io/filament-tool-kit/compare/1.12.0...1.13.0) (2024-10-03)
+
+
+### Features
+
+* make text entries and columns copyable ([091ae54](https://github.com/akira-io/filament-tool-kit/commit/091ae54b547c5271de616a5ef96f7931ad5d721b))
+
+
+### Bug Fixes
+
+* standardize spelling to "speciality" ([648ed38](https://github.com/akira-io/filament-tool-kit/commit/648ed3829368ee34ab97e709651fe456b04145a8))
+
 ## [1.12.0](https://github.com/akira-io/filament-tool-kit/compare/1.11.0...1.12.0) (2024-10-03)
 
 
