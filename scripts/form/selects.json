@@ -1,5 +1,9 @@
 {
   "project_group_id": " Grupo de Projeto",
   "gender_id": " Género",
-  "island_id": " Ilha"
+  "island_id": " Ilha",
+  "patient_id": " Paciente",
+  "doctor_id": " Médico",
+  "speciality_id": " Especialidade",
+  "consultation_id": " Consulta"
 }

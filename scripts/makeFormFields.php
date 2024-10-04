@@ -98,7 +98,7 @@ declare(strict_types=1);
 
 namespace $namespace;
 
-use Filament\Forms\Components\Select;use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
 
 final class $className
 {

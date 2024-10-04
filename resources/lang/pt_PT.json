@@ -102,5 +102,8 @@
     "Gender": " Género",
     "Speciality": "Especialidade",
     "Island": " Ilha",
-    "Date": "Data"
+    "Date": "Data",
+    "Patient": " Paciente",
+    "Doctor": " Médico",
+    "Consultation": " Consulta"
 }
