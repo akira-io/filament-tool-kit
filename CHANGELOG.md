@@ -1,5 +1,13 @@
 
 
+## [1.15.0](https://github.com/akira-io/filament-tool-kit/compare/1.14.0...1.15.0) (2024-10-04)
+
+
+### Features
+
+* add Date components and update translations ([88a31ac](https://github.com/akira-io/filament-tool-kit/commit/88a31accb49220e3cfcf547b1bd911e1c37a602a))
+* add ID select components and update translations ([535d5f3](https://github.com/akira-io/filament-tool-kit/commit/535d5f372ce848e0b84029a5db39b5c6ad802879))
+
 ## [1.14.0](https://github.com/akira-io/filament-tool-kit/compare/1.13.0...1.14.0) (2024-10-03)
 
 
