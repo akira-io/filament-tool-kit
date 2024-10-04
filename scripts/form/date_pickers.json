@@ -1,5 +1,6 @@
 {
   "email_verified_at": "E-mail verificado em",
   "closed_date": "Data de fecho",
-  "birth_date": "Data de nascimento"
+  "birth_date": "Data de nascimento",
+  "date": "Data"
 }

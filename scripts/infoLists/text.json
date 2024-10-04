@@ -28,5 +28,6 @@
   "last_name": "Apelido",
   "phone": "Telefone",
   "gender_id": "Género",
-  "speciality": "Especialidade"
+  "speciality": "Especialidade",
+  "date": "Data"
 }

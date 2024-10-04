@@ -25,5 +25,6 @@
   "birth_date": "Data de nascimento",
   "occupation": "Profissão",
   "gender_id": "Género",
-  "speciality": "Especialidade"
+  "speciality": "Especialidade",
+  "date": "Data"
 }
