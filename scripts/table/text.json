@@ -26,5 +26,7 @@
   "occupation": "Profissão",
   "gender_id": "Género",
   "speciality": "Especialidade",
-  "date": "Data"
+  "date": "Data",
+  "end_date": "Data de fim",
+  "start_date": "Data de início"
 }

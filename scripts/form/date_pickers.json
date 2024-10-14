@@ -2,5 +2,7 @@
   "email_verified_at": "E-mail verificado em",
   "closed_date": "Data de fecho",
   "birth_date": "Data de nascimento",
-  "date": "Data"
+  "date": "Data",
+  "end_date": "Data de fim",
+  "start_date": "Data de início"
 }

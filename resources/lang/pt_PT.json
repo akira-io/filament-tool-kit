@@ -105,5 +105,7 @@
     "Date": "Data",
     "Patient": " Paciente",
     "Doctor": " Médico",
-    "Consultation": " Consulta"
+    "Consultation": " Consulta",
+    "End Date": "Data de fim",
+    "Start Date": "Data de início"
 }
