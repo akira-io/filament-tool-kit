@@ -1,5 +1,12 @@
 
 
+## [1.16.0](https://github.com/akira-io/filament-tool-kit/compare/1.15.0...1.16.0) (2024-10-14)
+
+
+### Features
+
+* add start and end date components with translations ([34570c5](https://github.com/akira-io/filament-tool-kit/commit/34570c5e49402771c193af3c2e485d1bfaabca13))
+
 ## [1.15.0](https://github.com/akira-io/filament-tool-kit/compare/1.14.0...1.15.0) (2024-10-04)
 
 
