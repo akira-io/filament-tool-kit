@@ -1,5 +1,12 @@
 
 
+## [1.18.0](https://github.com/akira-io/filament-tool-kit/compare/1.17.0...1.18.0) (2024-11-02)
+
+
+### Features
+
+* add new form inputs and table columns ([b827f4d](https://github.com/akira-io/filament-tool-kit/commit/b827f4d94bd60596d51dba073e8511612670594e))
+
 ## [1.17.0](https://github.com/akira-io/filament-tool-kit/compare/1.16.0...1.17.0) (2024-11-02)
 
 
