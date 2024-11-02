@@ -31,5 +31,7 @@
   "speciality": "Especialidade",
   "date": "Data",
   "end_date": "Data de fim",
-  "start_date": "Data de início"
+  "start_date": "Data de início",
+  "extra_amount": "Montante extra",
+  "photo_number": "Número de fotos"
 }

@@ -12,5 +12,8 @@
   "phone": "Telefone",
   "address": "Morada",
   "occupation": "Profissão",
-  "speciality": "Especialidade"
+  "speciality": "Especialidade",
+  "amount": "Montante",
+  "extra_amount": "Montante extra",
+  "photo_number": "Número de fotos"
 }
