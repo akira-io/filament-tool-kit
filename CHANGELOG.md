@@ -1,5 +1,12 @@
 
 
+## [1.17.0](https://github.com/akira-io/filament-tool-kit/compare/1.16.0...1.17.0) (2024-11-02)
+
+
+### Features
+
+* add action to generate random code suffix ([bb21fba](https://github.com/akira-io/filament-tool-kit/commit/bb21fba9e9128b8a65a3440c0a25c5360efb321d))
+
 ## [1.16.0](https://github.com/akira-io/filament-tool-kit/compare/1.15.0...1.16.0) (2024-10-14)
 
 
