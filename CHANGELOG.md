@@ -1,5 +1,12 @@
 
 
+## [1.19.0](https://github.com/akira-io/filament-tool-kit/compare/1.18.0...1.19.0) (2024-11-02)
+
+
+### Features
+
+* add duration-related components and translations ([017a75c](https://github.com/akira-io/filament-tool-kit/commit/017a75cd5e92f6af9f07ccc0ce3543720ff85d24))
+
 ## [1.18.0](https://github.com/akira-io/filament-tool-kit/compare/1.17.0...1.18.0) (2024-11-02)
 
 
