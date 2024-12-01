@@ -7,5 +7,7 @@
   "speciality_id": " Especialidade",
   "consultation_id": " Consulta",
   "user_id": " Utilizador",
-  "catagory_id": " Categoria"
+  "catagory_id": " Categoria",
+  "status_id": " Estado",
+  "status": " Estado"
 }
