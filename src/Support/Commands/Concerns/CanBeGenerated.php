@@ -47,7 +47,7 @@ trait CanBeGenerated
     private function generateUseStatement(string $tableFqn): string
     {
 
-        return 'use '.ltrim($tableFqn, '\\').';';
+        return 'use '.mb_ltrim($tableFqn, '\\').';';
     }
 
     private function formatColumns(array $tableColumns): string
