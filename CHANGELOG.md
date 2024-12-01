@@ -1,5 +1,18 @@
 
 
+## [1.20.0](https://github.com/akira-io/filament-tool-kit/compare/1.19.0...1.20.0) (2024-12-01)
+
+
+### Features
+
+* add StatusIdSelect and StatusSelect components ([3d19044](https://github.com/akira-io/filament-tool-kit/commit/3d19044220286783ac6547a31f77bd7f89104e2e))
+* add UserIdSelect and CatagoryIdSelect components ([699e655](https://github.com/akira-io/filament-tool-kit/commit/699e65598aef45dd6b0d4fedc7ad343918d8cb68))
+
+
+### Bug Fixes
+
+* fixed numeric validation to AmountTextInput ([94e10d1](https://github.com/akira-io/filament-tool-kit/commit/94e10d1699edda92ae452f04be1483c5c59c534c))
+
 ## [1.19.0](https://github.com/akira-io/filament-tool-kit/compare/1.18.0...1.19.0) (2024-11-02)
 
 
