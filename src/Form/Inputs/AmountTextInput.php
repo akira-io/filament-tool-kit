@@ -11,6 +11,7 @@ final class AmountTextInput
     public static function make(): TextInput
     {
         return TextInput::make('amount')
+            ->numeric()
             ->label(__('Amount'));
     }
 }
