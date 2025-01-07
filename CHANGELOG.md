@@ -1,5 +1,12 @@
 
 
+## [1.22.0](https://github.com/akira-io/filament-tool-kit/compare/1.21.0...1.22.0) (2025-01-07)
+
+
+### Features
+
+* add OwnerIdSelect component and fix "Category" naming ([fabd5d0](https://github.com/akira-io/filament-tool-kit/commit/fabd5d01b303550e6cb14d6a11d91b322d4b718d))
+
 ## [1.21.0](https://github.com/akira-io/filament-tool-kit/compare/1.20.0...1.21.0) (2025-01-07)
 
 
