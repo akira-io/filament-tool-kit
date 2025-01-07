@@ -31,5 +31,6 @@
   "start_date": "Data de início",
   "extra_amount": "Montante extra",
   "photo_number": "Número de fotos",
-  "duration": "Duração"
+  "duration": "Duração",
+  "nif": "NIF"
 }
