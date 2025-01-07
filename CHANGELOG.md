@@ -1,5 +1,12 @@
 
 
+## [1.21.0](https://github.com/akira-io/filament-tool-kit/compare/1.20.0...1.21.0) (2025-01-07)
+
+
+### Features
+
+* add NIF-specific components and translations ([09a6ce7](https://github.com/akira-io/filament-tool-kit/commit/09a6ce7490758648b3ae8a259bde0840af7def89))
+
 ## [1.20.0](https://github.com/akira-io/filament-tool-kit/compare/1.19.0...1.20.0) (2024-12-01)
 
 
