@@ -6,13 +6,13 @@ namespace Akira\FilamentToolKit\Form\Selects;
 
 use Filament\Forms\Components\Select;
 
-final class CatagoryIdSelect
+final class OwnerIdSelect
 {
     public static function make(): Select
     {
-        return Select::make('catagory_id')
+        return Select::make('owner_id')
             ->searchable()
             ->preload()
-            ->label(__('Catagory'));
+            ->label(__('Owner'));
     }
 }

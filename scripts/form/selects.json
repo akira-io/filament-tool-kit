@@ -7,7 +7,8 @@
   "speciality_id": " Especialidade",
   "consultation_id": " Consulta",
   "user_id": " Utilizador",
-  "catagory_id": " Categoria",
+  "category_id": " Categoria",
   "status_id": " Estado",
-  "status": " Estado"
+  "status": " Estado",
+  "owner_id": " Proprietário"
 }
