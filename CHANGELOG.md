@@ -1,5 +1,12 @@
 
 
+## [1.23.0](https://github.com/akira-io/filament-tool-kit/compare/1.22.0...1.23.0) (2025-01-11)
+
+
+### Features
+
+* add new reusable components for forms, tables, and localization ([f81a7bd](https://github.com/akira-io/filament-tool-kit/commit/f81a7bdb1a27d4a21ba2eced18e247dbc91abd27))
+
 ## [1.22.0](https://github.com/akira-io/filament-tool-kit/compare/1.21.0...1.22.0) (2025-01-07)
 
 
