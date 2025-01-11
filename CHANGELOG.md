@@ -1,5 +1,15 @@
 
 
+## [1.24.0](https://github.com/akira-io/filament-tool-kit/compare/1.23.0...1.24.0) (2025-01-11)
+
+
+### Features
+
+* add FareIdSelect component and update selects translations ([7b1eb1a](https://github.com/akira-io/filament-tool-kit/commit/7b1eb1a22431870e71e80d188cf3d02d5a4aa845))
+* add FareSelect component and localization support ([972febe](https://github.com/akira-io/filament-tool-kit/commit/972febedc76d00eca0097dab89b704f466d78f40))
+* add PassengerIdSelect component for reusable passenger selection ([5fd740b](https://github.com/akira-io/filament-tool-kit/commit/5fd740b7152d4a496d26db4632b1c40f19afa019))
+* add ScheduleReturnSelect component and translation key ([4f15efa](https://github.com/akira-io/filament-tool-kit/commit/4f15efa775a3773ea8938e3b8d28520e52c0cbf3))
+
 ## [1.23.0](https://github.com/akira-io/filament-tool-kit/compare/1.22.0...1.23.0) (2025-01-11)
 
 
