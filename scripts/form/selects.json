@@ -22,5 +22,6 @@
   "document_type_id": " Tipo de documento",
   "schedule_return": " Horário de regresso",
   "passenger_id": " Passageiro",
-  "fare": " Tarifa"
+  "fare": " Tarifa",
+  "fare_id": " Tarifa"
 }
