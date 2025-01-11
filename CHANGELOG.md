@@ -1,5 +1,12 @@
 
 
+## [1.25.0](https://github.com/akira-io/filament-tool-kit/compare/1.24.0...1.25.0) (2025-01-11)
+
+
+### Features
+
+* add PassengerFareIdSelect and related translations ([847f555](https://github.com/akira-io/filament-tool-kit/commit/847f55576633a35bcea510e796d6975b647e61b3))
+
 ## [1.24.0](https://github.com/akira-io/filament-tool-kit/compare/1.23.0...1.24.0) (2025-01-11)
 
 
