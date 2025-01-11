@@ -19,5 +19,6 @@
   "roles": " Funções",
   "promotion_id": " Promoção",
   "ticket_status_id": " Estado",
-  "document_type_id": " Tipo de documento"
+  "document_type_id": " Tipo de documento",
+  "schedule_return": " Horário de regresso"
 }
