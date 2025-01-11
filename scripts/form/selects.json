@@ -23,5 +23,6 @@
   "schedule_return": " Horário de regresso",
   "passenger_id": " Passageiro",
   "fare": " Tarifa",
-  "fare_id": " Tarifa"
+  "fare_id": " Tarifa",
+  "passenger_fare_id": " Tarifa Passageiro"
 }
