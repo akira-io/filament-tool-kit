@@ -21,5 +21,6 @@
   "ticket_status_id": " Estado",
   "document_type_id": " Tipo de documento",
   "schedule_return": " Horário de regresso",
-  "passenger_id": " Passageiro"
+  "passenger_id": " Passageiro",
+  "fare": " Tarifa"
 }
