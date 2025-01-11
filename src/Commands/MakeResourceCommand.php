@@ -121,7 +121,7 @@ final class MakeResourceCommand extends Command
 
         $resource = "{$model}Resource";
 
-        //resource
+        // resource
         $baseResourcePath =
             (string) str($resource)
                 ->prepend('/')
@@ -132,7 +132,7 @@ final class MakeResourceCommand extends Command
         $resourcePath = "{$baseResourcePath}/{$resource}.php";
         $resourceClass = "{$modelClass}Resource";
 
-        //pages
+        // pages
         $resourcePagesPath = "{$baseResourcePath}/Pages/{$modelClass}Pages.php";
         $viewPagePath = "{$baseResourcePath}/Pages/View{$modelClass}.php";
         $editPagePath = "{$baseResourcePath}/Pages/Edit{$modelClass}.php";
@@ -143,25 +143,25 @@ final class MakeResourceCommand extends Command
         $editResourcePageClass = "Edit{$modelClass}";
         $viewResourcePageClass = "View{$modelClass}";
 
-        //infoList
+        // infoList
         $infoListPagesDirectory = "{$baseResourcePath}/InfoLists";
         $infolistPath = "{$infoListPagesDirectory}/{$modelClass}InfoList.php";
         $infolistSchemaPath = "{$infoListPagesDirectory}/{$modelClass}InfoListSchema.php";
 
-        //actions
+        // actions
         $actionsDirectory = "{$baseResourcePath}/Actions";
         $editPageActionPath = "{$actionsDirectory }/Pages/{$modelClass}EditHeaderAction.php";
 
-        //tables
+        // tables
         $tablesPagesDirectory = "{$baseResourcePath}/Tables";
         $tablesPath = "{$tablesPagesDirectory}/{$modelClass}Table.php";
 
-        //forms
+        // forms
         $formsPagesDirectory = "{$baseResourcePath}/Forms";
 
         $formsPath = "{$formsPagesDirectory}/{$modelClass}Form.php";
 
-        //relations
+        // relations
         $relationsPagesDirectory = "{$baseResourcePath}/RelationManagers";
 
         $relationsPath = "{$relationsPagesDirectory}/{$modelClass}Relations.php";
@@ -309,17 +309,17 @@ final class MakeResourceCommand extends Command
             'modelClass' => $modelClass,
         ]);
 
-        //filters
+        // filters
         $filtersPagesDirectory = "{$baseResourcePath}/Filters";
 
-        //relations
+        // relations
 
         $this->copyStubToApp('Relations', $relationsPath, [
             'namespace' => "{$namespace}\\{$resourceClass}\\RelationManagers",
             'modelClass' => $modelClass,
         ]);
 
-        //infolist
+        // infolist
 
         $this->copyStubToApp('InfoList', $infolistPath, [
             'namespace' => "{$namespace}\\{$resourceClass}\\InfoLists",
