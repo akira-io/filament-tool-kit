@@ -17,5 +17,7 @@
   "extra_amount": "Montante extra",
   "photo_number": "Número de fotos",
   "duration": "Duração",
-  "nif": "NIF"
+  "nif": "NIF",
+  "price": "Preço",
+  "title": "Título"
 }

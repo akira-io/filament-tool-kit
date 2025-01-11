@@ -115,5 +115,15 @@
     "User": " Utilizador",
     "Catagory": " Categoria",
     "Nif": "NIF",
-    "Owner": " Proprietário"
+    "Owner": " Proprietário",
+    "Title": "Título",
+    "Route": " Rota",
+    "Schedule": " Horário",
+    "Vehicle Fare": "Veículo",
+    "Schedule Return": " Horário de regresso",
+    "Agency": " Agência",
+    "Roles": " Funções",
+    "Promotion": " Promoção",
+    "Ticket Status": " Estado",
+    "Document Type": " Tipo de documento"
 }

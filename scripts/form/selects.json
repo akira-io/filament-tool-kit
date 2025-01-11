@@ -10,5 +10,14 @@
   "category_id": " Categoria",
   "status_id": " Estado",
   "status": " Estado",
-  "owner_id": " Proprietário"
+  "owner_id": " Proprietário",
+  "route_id": " Rota",
+  "schedule_id": " Horário",
+  "vehicle_fare_id": "Veículo",
+  "schedule_return_id": " Horário de regresso",
+  "agency_id": " Agência",
+  "roles": " Funções",
+  "promotion_id": " Promoção",
+  "ticket_status_id": " Estado",
+  "document_type_id": " Tipo de documento"
 }
