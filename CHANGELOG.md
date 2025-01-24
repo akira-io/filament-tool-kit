@@ -1,5 +1,13 @@
 
 
+## [1.26.0](https://github.com/akira-io/filament-tool-kit/compare/1.25.1...1.26.0) (2025-01-24)
+
+
+### Features
+
+* add missing docblocks to stub files and update dependencies ([ddc653e](https://github.com/akira-io/filament-tool-kit/commit/ddc653ea06310ec1b08a05b43a4f12f02b315d21))
+* refactor codebase and enhance workflows ([a5cfef2](https://github.com/akira-io/filament-tool-kit/commit/a5cfef2bc6059ec7f0c70ca2450f00c653ae6d6a))
+
 ## [1.25.1](https://github.com/akira-io/filament-tool-kit/compare/1.25.0...1.25.1) (2025-01-24)
 
 
