@@ -9,6 +9,9 @@ use Filament\Tables\Table;
 
 final class {{ modelClass }}Table
 {
+    /**
+     * Get the table schema definition.
+     */
     public static function make(Table $table): Table
     {
         return $table

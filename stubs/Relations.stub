@@ -6,6 +6,9 @@ namespace {{ namespace }};
 
 final class {{ modelClass }}Relations
 {
+    /**
+      * Get the relations schema definition.
+      */
     public static function make(): array
     {
         return [

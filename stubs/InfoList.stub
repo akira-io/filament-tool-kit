@@ -8,6 +8,9 @@ use Filament\Infolists\Infolist;
 
 final class {{ modelClass }}InfoList
 {
+    /**
+     * Make the infolist.
+     */
     public static function make(Infolist $infolist): Infolist
     {
         return $infolist

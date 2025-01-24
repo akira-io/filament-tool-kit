@@ -12,6 +12,10 @@ final class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
 {
     protected static string $resource = {{ resourceClass }}::class;
 
+    /**
+     * Get the header actions for the page.
+     *
+     */
     protected function getHeaderActions(): array
     {
         return [

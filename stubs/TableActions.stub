@@ -11,6 +11,10 @@ use Filament\Tables\Actions\RestoreAction;
 
 final class {{ modelClass }}TableActions
 {
+
+    /**
+     * Get the table actions schema definition.
+     */
     public static function make(): array
     {
         return [

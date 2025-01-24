@@ -6,6 +6,10 @@ namespace {{ namespace }};
 
 final class {{ modelClass }}TableFilters
 {
+
+    /**
+     * Get the table filters schema definition.
+     */
     public static function make(): array
     {
         return [

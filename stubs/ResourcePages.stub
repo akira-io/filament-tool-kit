@@ -7,6 +7,9 @@ namespace {{ namespace }};
 
 final class {{ modelClass }}Pages
 {
+    /**
+     * Get the page schema definition.
+     */
     public static function make(): array
     {
         return [

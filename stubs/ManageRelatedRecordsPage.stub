@@ -20,11 +20,19 @@ final class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    /**
+     * Get the navigation label for the resource.
+     *
+     */
     public static function getNavigationLabel(): string
     {
         return '{{ title }}';
     }
 
+    /**
+     * Get the  form for creating a record.
+     *
+     */
     public function form(Form $form): Form
     {
         return $form
@@ -35,6 +43,10 @@ final class {{ resourcePageClass }} extends {{ baseResourcePageClass }}
             ]);
     }
 
+    /**
+     * Get the table for the resource.
+     *
+     */
     public function table(Table $table): Table
     {
         return $table

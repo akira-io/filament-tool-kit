@@ -8,6 +8,10 @@ namespace {{ namespace }};
 
 final class {{ modelClass }}TableColumns
 {
+
+    /**
+     * Get the table columns schema definition.
+     */
     public static function make(): array
     {
         return [

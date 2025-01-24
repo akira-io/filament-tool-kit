@@ -25,38 +25,65 @@ final class {{ resourceClass }} extends Resource
 
     protected static ?string $activeNavigationIcon = 'heroicon-s-rectangle-stack';
 
-     public static function getLabel(): ?string
+        /**
+        * Get the navigation label for the resource.
+        *
+        */
+     public static function getLabel(): string
      {
         return __('{{ resourceLabel }}');
      }
 
-    public static function getPluralLabel(): ?string
+    /**
+    * Get the plural navigation label for the resource.
+    *
+    */
+    public static function getPluralLabel(): string
     {
         return __('{{ resourcePluralLabel }}');
     }
 
-
+    /**
+    * Get the form for the resource.
+    *
+    */
     public static function form(Form $form): Form
     {
         return {{ modelClass }}Form::make($form);
     }
 
+    /**
+    * Get the table for the resource.
+    *
+    */
     public static function table(Table $table): Table
     {
         return {{ modelClass }}Table::make($table);
     }
 
+    /**
+    * Get the infolist for the resource.
+    *
+    */
      public static function infolist(Infolist $infolist): Infolist
      {
         return {{ modelClass }}Infolist::make($infolist);
      }
 
 
+    /**
+    * Get the pages for the resource.
+    *
+    */
     public static function getPages(): array
     {
        return {{ modelClass }}Pages::make();
     }
 
+    /**
+    * Get the relations for the resource.
+    *
+    */
     public static function getRelations(): array
     {
        return {{ modelClass }}Relations::make();

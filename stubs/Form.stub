@@ -8,6 +8,9 @@ use Filament\Forms\Form;
 
 final class {{ modelClass }}Form
 {
+    /**
+     * Make the form.
+     */
     public static function make(Form $form): Form
     {
         return $form

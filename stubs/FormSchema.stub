@@ -9,6 +9,9 @@ use Filament\Forms\Components\Section;
 
 final class {{ modelClass }}FormSchema
 {
+    /**
+     * Get the form schema definition.
+     */
     public static function make(): array
     {
         return [
