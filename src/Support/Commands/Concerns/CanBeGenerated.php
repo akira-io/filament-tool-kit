@@ -53,10 +53,7 @@ trait CanBeGenerated
     private function formatColumns(array $tableColumns): string
     {
 
-        $formattedColumns = array_map(function ($column) {
-
-            return mb_str_pad($column, 30);
-        }, $tableColumns);
+        $formattedColumns = array_map(fn ($column): string => mb_str_pad($column, 30), $tableColumns);
 
         return implode(PHP_EOL, $formattedColumns);
     }

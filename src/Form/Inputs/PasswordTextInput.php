@@ -17,7 +17,7 @@ final class PasswordTextInput
             ->password()
             ->minLength(8)
             ->dehydrated(fn (?string $state) => filled($state))
-            ->required(fn (string $operation) => $operation === 'create')
+            ->required(fn (string $operation): bool => $operation === 'create')
             ->maxLength(255);
     }
 }

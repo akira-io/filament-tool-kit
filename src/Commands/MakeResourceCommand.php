@@ -10,8 +10,14 @@ use Akira\FilamentToolKit\Support\Commands\Concerns\CanGenerateInfoListEntries;
 use Akira\FilamentToolKit\Support\Commands\Concerns\CanGenerateTableColumns;
 use Akira\FilamentToolKit\Support\Commands\Concerns\CanManipulateFiles;
 use Akira\FilamentToolKit\Support\Commands\Concerns\InteractsWithGithub;
+use Exception;
 use Filament\Facades\Filament;
 use Filament\Panel;
+use Filament\Resources\Pages\CreateRecord;
+use Filament\Resources\Pages\EditRecord;
+use Filament\Resources\Pages\ListRecords;
+use Filament\Resources\Pages\ViewRecord;
+use Filament\Resources\Resource;
 use Filament\Support\Commands\Concerns\CanIndentStrings;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
@@ -33,6 +39,9 @@ final class MakeResourceCommand extends Command
 
     public $description = 'generate a new Tool Kit resource';
 
+    /**
+     * @throws Exception
+     */
     public function handle(): int
     {
         $models = $this->argument('model');
@@ -44,12 +53,15 @@ final class MakeResourceCommand extends Command
         }
 
         if (! $panel) {
+
             $panels = Filament::getPanels();
 
             $panel = (count($panels) > 1) ? $panels[select(
                 label: 'Which panel would you like to create this in?',
                 options: array_map(
-                    fn (Panel $panel): string => $panel->getId(),
+                    /**
+                     * @throws Exception
+                     */ fn (Panel $panel): string => $panel->getId(),
                     $panels,
                 ),
                 default: Filament::getDefaultPanel()->getId(),
@@ -60,7 +72,7 @@ final class MakeResourceCommand extends Command
 
         if ($this->option('multiple')) {
 
-            $_models = array_filter($_models, fn ($model) => $model !== '');
+            $_models = array_filter($_models, fn (string $model): bool => $model !== '');
 
             foreach ($_models as $model) {
                 $this->handleCommand(panel: $panel, model: $model);
@@ -74,7 +86,7 @@ final class MakeResourceCommand extends Command
         return self::SUCCESS;
     }
 
-    private function handleCommand(Panel $panel, ?string $model = null)
+    private function handleCommand(Panel $panel, ?string $model = null): ?int
     {
         $model = str($model ?? text(
             label: 'What is the model name?',
@@ -96,9 +108,9 @@ final class MakeResourceCommand extends Command
         // $tableColumns = SchemaFacade::getColumns(str($model)->snake()->plural());
 
         $modelClass = (string) str($model)->afterLast('\\');
-        $modelSubNamespace = str($model)->contains('\\') ?
-            (string) str($model)->beforeLast('\\') :
-            '';
+        if (str($model)->contains('\\')) {
+            str($model)->beforeLast('\\');
+        }
 
         $modelNamespace = $this->option('model-namespace') ?? 'App\\Models';
         $pluralModelClass = (string) str($modelClass)->pluralStudly();
@@ -184,7 +196,7 @@ final class MakeResourceCommand extends Command
         }
 
         $this->copyStubToApp('Resource', $resourcePath, [
-            'baseResource' => 'Filament\\Resources\\Resource'.($needsAlias ? ' as BaseResource' : ''),
+            'baseResource' => Resource::class.($needsAlias ? ' as BaseResource' : ''),
             'baseResourceClass' => $needsAlias ? 'BaseResource' : 'Resource',
             'model' => "{$modelNamespace}\\{$modelClass}",
             'modelClass' => $modelClass,
@@ -215,13 +227,12 @@ final class MakeResourceCommand extends Command
         ]);
 
         $this->copyStubToApp('ViewPage', $viewPagePath, [
-            'baseResourcePage' => 'Filament\\Resources\\Pages\\ViewRecord'.($needsAlias ? ' as BaseViewRecord' : ''),
+            'baseResourcePage' => ViewRecord::class.($needsAlias ? ' as BaseViewRecord' : ''),
             'baseResourcePageClass' => $needsAlias ? 'BaseViewRecord' : 'ViewRecord',
             'namespace' => "{$namespace}\\{$resourceClass}",
             'resource' => "{$namespace}\\{$resourceClass}",
             'resourceClass' => $resourceClass,
-            'resourcePageClass' => $viewResourcePageClass,
-            'modelClass' => $modelClass,
+            'resourcePageClass' => $viewResourcePageClass, 'modelClass' => $modelClass,
         ]);
 
         $editPageActions[] = 'Actions\DeleteAction::make(),';
@@ -231,7 +242,7 @@ final class MakeResourceCommand extends Command
         if (! $this->option('simple')) {
 
             $this->copyStubToApp('EditPage', $editPagePath, [
-                'baseResourcePage' => 'Filament\\Resources\\Pages\\EditRecord'.($needsAlias ? ' as BaseEditRecord' : ''),
+                'baseResourcePage' => EditRecord::class.($needsAlias ? ' as BaseEditRecord' : ''),
                 'baseResourcePageClass' => $needsAlias ? 'BaseEditRecord' : 'EditRecord',
                 'actions' => $this->indentString($editPageActions, 3),
                 'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
@@ -241,7 +252,7 @@ final class MakeResourceCommand extends Command
             ]);
 
             $this->copyStubToApp('CreatePage', $createPagePath, [
-                'baseResourcePage' => 'Filament\\Resources\\Pages\\CreateRecord'.($needsAlias ? ' as BaseCreateRecord' : ''),
+                'baseResourcePage' => CreateRecord::class.($needsAlias ? ' as BaseCreateRecord' : ''),
                 'baseResourcePageClass' => $needsAlias ? 'BaseCreateRecord' : 'CreateRecord',
                 'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
                 'resource' => "{$namespace}\\{$resourceClass}",
@@ -251,7 +262,7 @@ final class MakeResourceCommand extends Command
         }
 
         $this->copyStubToApp('ListPage', $listPagePath, [
-            'baseResourcePage' => 'Filament\\Resources\\Pages\\ListRecords'.($needsAlias ? ' as BaseListRecords' : ''),
+            'baseResourcePage' => ListRecords::class.($needsAlias ? ' as BaseListRecords' : ''),
             'baseResourcePageClass' => $needsAlias ? 'BaseListRecords' : 'ListRecords',
             'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
             'resource' => "{$namespace}\\{$resourceClass}",
@@ -309,9 +320,6 @@ final class MakeResourceCommand extends Command
             'modelClass' => $modelClass,
         ]);
 
-        // filters
-        $filtersPagesDirectory = "{$baseResourcePath}/Filters";
-
         // relations
 
         $this->copyStubToApp('Relations', $relationsPath, [
@@ -359,5 +367,7 @@ final class MakeResourceCommand extends Command
                 'entries' => $this->indentString($infoListEntries, 3),
             ]);
         }
+
+        return null;
     }
 }

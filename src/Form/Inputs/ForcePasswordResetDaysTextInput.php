@@ -16,7 +16,7 @@ final class ForcePasswordResetDaysTextInput
             ->minValue(7)
             ->default(7)
             ->step(1)
-            ->hidden(fn (Get $get) => ! $get('force_reset_password'))
+            ->hidden(fn (Get $get): bool => ! $get('force_reset_password'))
             ->helperText(__('Require users to reset their password every x days.'));
     }
 }

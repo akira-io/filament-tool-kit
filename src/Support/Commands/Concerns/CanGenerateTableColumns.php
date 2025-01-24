@@ -26,9 +26,10 @@ trait CanGenerateTableColumns
         foreach ($columns as $column) {
 
             $tableFqn = $this->findTableMatchingColumnClass($column, $modelClass);
-
-            if (in_array($column, ['password']) || str_ends_with($column, '_id')
-            ) {
+            if ($column === 'password') {
+                continue;
+            }
+            if (str_ends_with((string) $column, '_id')) {
                 continue;
             }
 

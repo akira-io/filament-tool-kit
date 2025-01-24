@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 final class CodeTextInput
 {
-    public static function make($length = 8): TextInput
+    public static function make(int $length = 8): TextInput
     {
         return TextInput::make('code')
             ->label(__('Code'))
@@ -21,7 +21,7 @@ final class CodeTextInput
                 Action::make('generateNewCode')
                     ->iconButton()
                     ->icon('heroicon-o-arrow-path-rounded-square')
-                    ->action(fn (TextInput $component) => $component->state(fn () => Str::random($length)))
+                    ->action(fn (TextInput $component): TextInput => $component->state(fn () => Str::random($length)))
             )
             ->unique(ignoreRecord: true);
     }

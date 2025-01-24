@@ -20,7 +20,7 @@ use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 
-class TestCase extends Orchestra
+abstract class TestCase extends Orchestra
 {
     protected function setUp(): void
     {
@@ -31,7 +31,7 @@ class TestCase extends Orchestra
         );
     }
 
-    public function getEnvironmentSetUp($app)
+    final public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
 

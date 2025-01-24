@@ -30,12 +30,15 @@
     "laravel/pint": "^1.20.0",
     "nunomaduro/collision": "^7.11",
     "orchestra/testbench": "^8.31",
+    "peckphp/peck": "^0.1.1",
     "pestphp/pest": "^2.36.0",
     "pestphp/pest-plugin-arch": "^2.7",
     "pestphp/pest-plugin-laravel": "^2.4",
+    "pestphp/pest-plugin-type-coverage": "^2.8",
     "phpstan/extension-installer": "^1.4.3",
     "phpstan/phpstan-deprecation-rules": "^1.2.1",
     "phpstan/phpstan-phpunit": "^1.4.2",
+    "rector/rector": "^1.2",
     "spatie/laravel-ray": "^1.39.0"
   },
   "autoload": {
@@ -51,10 +54,22 @@
   },
   "scripts": {
     "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-    "analyse": "vendor/bin/phpstan analyse",
-    "test": "vendor/bin/pest",
-    "test-coverage": "vendor/bin/pest --coverage",
-    "format": "vendor/bin/pint"
+    "lint": "pint",
+    "refactor": "rector",
+    "test:type-coverage": "pest --type-coverage --min=100",
+    "test:typos": "peck",
+    "test:lint": "pint --test",
+    "test:unit": "pest --parallel",
+    "test:types": "phpstan",
+    "test:refactor": "rector --dry-run",
+    "test": [
+      "@test:type-coverage",
+      "@test:typos",
+      "@test:unit",
+      "@test:lint",
+      "@test:types",
+      "@test:refactor"
+    ]
   },
   "config": {
     "sort-packages": true,

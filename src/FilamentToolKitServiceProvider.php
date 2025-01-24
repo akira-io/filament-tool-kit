@@ -19,7 +19,7 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentToolKitServiceProvider extends PackageServiceProvider
+final class FilamentToolKitServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-tool-kit';
 
@@ -34,7 +34,7 @@ class FilamentToolKitServiceProvider extends PackageServiceProvider
          */
         $package->name(self::$name)
             ->hasCommands($this->getCommands())
-            ->hasInstallCommand(function (InstallCommand $command) {
+            ->hasInstallCommand(function (InstallCommand $command): void {
                 $command
                     ->publishConfigFile()
 //                    ->publishMigrations()

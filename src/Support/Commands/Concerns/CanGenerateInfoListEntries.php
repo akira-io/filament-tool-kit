@@ -26,8 +26,10 @@ trait CanGenerateInfoListEntries
         foreach ($columns as $column) {
 
             $tableFqn = $this->findInfoListEntriesMatchingColumnClass($column, $modelClass);
-
-            if (in_array($column, ['created_at', 'updated_at', 'remember_token', 'password']) || str_ends_with($column, '_id')) {
+            if (in_array($column, ['created_at', 'updated_at', 'remember_token', 'password'])) {
+                continue;
+            }
+            if (str_ends_with((string) $column, '_id')) {
                 continue;
             }
 

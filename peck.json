@@ -1,0 +1,16 @@
+{
+  "preset": "laravel",
+  "ignore": {
+    "words": [
+      "php",
+      "fqn",
+      "uuid",
+      "speciality",
+      "nif",
+      "fav",
+      "vpn",
+      "textareas"
+    ],
+    "paths": []
+  }
+}

@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Out of 92 possible param types, only 88 \\- 95\\.6 %% actually have it\\. Add more param types to get over 99 %%$#"
+			count: 4
+			path: src/Commands/MakeResourceCommand.php

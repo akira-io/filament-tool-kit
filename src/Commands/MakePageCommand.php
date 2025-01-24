@@ -191,7 +191,7 @@ final class MakePageCommand extends Command
             }
         }
 
-        if (empty($resource)) {
+        if ($resource === null || $resource === '' || $resource === '0') {
             $pageDirectories = $panel->getPageDirectories();
             $pageNamespaces = $panel->getPageNamespaces();
 
@@ -221,17 +221,17 @@ final class MakePageCommand extends Command
 
         $view = str($page)
             ->prepend(
-                (string) str(empty($resource) ? "{$namespace}\\" : "{$resourceNamespace}\\{$resource}\\pages\\")
+                (string) str($resource === null || $resource === '' || $resource === '0' ? "{$namespace}\\" : "{$resourceNamespace}\\{$resource}\\pages\\")
                     ->replaceFirst('App\\', '')
             )
             ->replace('\\', '/')
             ->explode('/')
-            ->map(fn ($segment) => Str::lower(Str::kebab($segment)))
+            ->map(fn (string $segment) => Str::lower(Str::kebab($segment)))
             ->implode('.');
 
         $path = (string) str($page)
             ->prepend('/')
-            ->prepend(empty($resource) ? $path : $resourcePath."\\{$resource}\\Pages\\")
+            ->prepend($resource === null || $resource === '' || $resource === '0' ? $path : $resourcePath."\\{$resource}\\Pages\\")
             ->replace('\\', '/')
             ->replace('//', '/')
             ->append('.php');
@@ -252,7 +252,7 @@ final class MakePageCommand extends Command
             return self::INVALID;
         }
 
-        $potentialCluster = empty($resource) ? ((string) str($namespace)->beforeLast('\Pages')) : null;
+        $potentialCluster = $resource === null || $resource === '' || $resource === '0' ? ((string) str($namespace)->beforeLast('\Pages')) : null;
         $clusterAssignment = null;
         $clusterImport = null;
 
@@ -265,7 +265,7 @@ final class MakePageCommand extends Command
             $clusterImport = "use {$potentialCluster};".PHP_EOL;
         }
 
-        if (empty($resource)) {
+        if ($resource === null || $resource === '' || $resource === '0') {
             $this->copyStubToApp('Page', $path, [
                 'class' => $pageClass,
                 'clusterAssignment' => $clusterAssignment,
@@ -306,7 +306,7 @@ final class MakePageCommand extends Command
             ]);
         }
 
-        if (empty($resource) || $resourcePage === 'custom') {
+        if ($resource === null || $resource === '' || $resource === '0' || $resourcePage === 'custom') {
             $this->copyStubToApp('ViewPage', $viewPath);
         }
 
