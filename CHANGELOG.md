@@ -1,5 +1,12 @@
 
 
+## [1.25.1](https://github.com/akira-io/filament-tool-kit/compare/1.25.0...1.25.1) (2025-01-24)
+
+
+### Bug Fixes
+
+* update dependencies in composer.json to latest versions ([87e5812](https://github.com/akira-io/filament-tool-kit/commit/87e581215a712af81695e21a58923951cd9b4194))
+
 ## [1.25.0](https://github.com/akira-io/filament-tool-kit/compare/1.24.0...1.25.0) (2025-01-11)
 
 
