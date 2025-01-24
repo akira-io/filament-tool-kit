@@ -23,6 +23,9 @@ final class {{ modelClass }}InfoListSchema
         ];
     }
 
+    /**
+     * Get the information section schema definition.
+     */
     private static function getTimeStampsSectionSchema(): array
     {
         return [
@@ -31,6 +34,9 @@ final class {{ modelClass }}InfoListSchema
         ];
     }
 
+    /**
+     * Get the information section schema definition.
+     */
     private static function getInformationSection(): Section
     {
         return Section::make()
@@ -40,6 +46,9 @@ final class {{ modelClass }}InfoListSchema
             ->columns(3);
     }
 
+    /**
+     * Get the information section schema definition.
+     */
     private static function getTimeStampsSection(): Section
     {
         return Section::make()
