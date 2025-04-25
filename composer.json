@@ -22,14 +22,14 @@
   "require": {
     "php": "^8.1",
     "filament/filament": "^3.2.134",
-    "laravel/prompts": "^0.1.25",
+    "laravel/prompts": "^0.3.1",
     "spatie/laravel-package-tools": "^1.18.3"
   },
   "require-dev": {
     "larastan/larastan": "^2.9.12",
     "laravel/pint": "^1.20.0",
-    "nunomaduro/collision": "^7.11",
-    "orchestra/testbench": "^8.31",
+    "nunomaduro/collision": "^7.11|^8.0",
+    "orchestra/testbench": "^8.31|^9.0|^10.0",
     "pestphp/pest": "^2.36.0",
     "pestphp/pest-plugin-arch": "^2.7",
     "pestphp/pest-plugin-laravel": "^2.4",
