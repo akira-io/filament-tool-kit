@@ -1,5 +1,7 @@
 
 
+## [1.26.1](https://github.com/akira-io/filament-tool-kit/compare/1.26.0...1.26.1) (2025-04-25)
+
 ## [1.26.0](https://github.com/akira-io/filament-tool-kit/compare/1.25.1...1.26.0) (2025-01-24)
 
 
