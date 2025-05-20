@@ -1,5 +1,12 @@
 
 
+## [1.28.0](https://github.com/akira-io/filament-tool-kit/compare/1.27.0...1.28.0) (2025-05-20)
+
+
+### Features
+
+* add slug and content fields to text.json ([44c4765](https://github.com/akira-io/filament-tool-kit/commit/44c476562fbfc9a12164305776638a64a3f7699b))
+
 ## [1.27.0](https://github.com/akira-io/filament-tool-kit/compare/1.26.1...1.27.0) (2025-05-20)
 
 
