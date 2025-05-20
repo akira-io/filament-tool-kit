@@ -19,5 +19,6 @@
   "duration": "Duração",
   "nif": "NIF",
   "price": "Preço",
-  "title": "Título"
+  "title": "Título",
+  "slug": "Slug"
 }

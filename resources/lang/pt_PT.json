@@ -128,5 +128,7 @@
     "Document Type": " Tipo de documento",
     "Passenger": " Passageiro",
     "Fare": " Tarifa",
-    "Passenger Fare": " Tarifa Passageiro"
+    "Passenger Fare": " Tarifa Passageiro",
+    "Slug": "Slug",
+    "Content": "Conteudo"
 }

@@ -36,5 +36,7 @@
   "photo_number": "Número de fotos",
   "duration": "Duração",
   "nif": "NIF",
-  "title": "Título"
+  "title": "Título",
+  "content": "Conteudo",
+  "slug": "Slug"
 }
