@@ -8,10 +8,12 @@
 A powerhouse of tools designed to turbocharge our data management and visualization game. From seamless organization to
 jaw-dropping visuals, Filament Toolkit is about how we interact with data on Filament.
 
-## Dependencies
+## Versions & Compatibility
 
-- Laravel 10.x
-- Filament 3.x
+- **v1.x** → For **Filament 3.x** (Laravel 10.x, PHP 8.1+)
+- **v2.x** → For **Filament 4.x** (Laravel 11/12, PHP 8.2+)
+
+___
 
 ## Installation
 

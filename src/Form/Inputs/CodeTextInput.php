@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Akira\FilamentToolKit\Form\Inputs;
 
-use Filament\Forms\Components\Actions\Action;
+use Filament\Actions\Action;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Support\Str;
 

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Akira\FilamentToolKit\Form\Inputs;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Get;
+use Filament\Schemas\Components\Utilities\Get;
 
 final class ForcePasswordResetDaysTextInput
 {

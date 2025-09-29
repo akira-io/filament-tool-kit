@@ -13,5 +13,4 @@ final class ContentRichEditor
         return RichEditor::make('content')
             ->label(__('Content'));
     }
-   
 }
