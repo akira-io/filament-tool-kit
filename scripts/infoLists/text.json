@@ -38,5 +38,19 @@
   "nif": "NIF",
   "title": "Título",
   "content": "Conteudo",
-  "slug": "Slug"
+  "slug": "Slug",
+  "github_user_name": "Nome de utilizador do GitHub",
+  "avatar_url": "URL do avatar",
+  "location": "Localização",
+  "github_id": "ID do GitHub",
+  "github_token": "Token do GitHub",
+  "github_refresh_token": "Token de atualização do GitHub",
+  "bio": "Bio",
+  "github_url": "URL do GitHub",
+  "twitter_url": "URL do Twitter",
+  "linkedin_url": "URL do LinkedIn",
+  "bluesky_url": "URL do Bluesky",
+  "website_url": "URL do website",
+  "youtube_url": "URL do YouTube",
+  "user_name": "Nome de utilizador"
 }

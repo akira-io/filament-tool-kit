@@ -130,5 +130,19 @@
     "Fare": " Tarifa",
     "Passenger Fare": " Tarifa Passageiro",
     "Slug": "Slug",
-    "Content": "Conteudo"
+    "Content": "Conteudo",
+    "Github User Name": "Nome de utilizador do GitHub",
+    "Avatar Url": "URL do avatar",
+    "Location": "Localização",
+    "Github": "ID do GitHub",
+    "Github Token": "Token do GitHub",
+    "Github Refresh Token": "Token de atualização do GitHub",
+    "Bio": "Bio",
+    "Github Url": "URL do GitHub",
+    "Twitter Url": "URL do Twitter",
+    "Linkedin Url": "URL do LinkedIn",
+    "Bluesky Url": "URL do Bluesky",
+    "Website Url": "URL do website",
+    "Youtube Url": "URL do YouTube",
+    "User Name": "Nome de utilizador"
 }
