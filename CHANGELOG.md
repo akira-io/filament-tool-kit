@@ -1,5 +1,12 @@
 
 
+## [2.0.0](https://github.com/akira-io/filament-tool-kit/compare/1.28.0...2.0.0) (2025-09-30)
+
+
+### Features
+
+* add bio and social media fields to form components and JSON files ([fc3ef9d](https://github.com/akira-io/filament-tool-kit/commit/fc3ef9d04436a776616309f22534a94c7a64531e))
+
 ## [1.28.0](https://github.com/akira-io/filament-tool-kit/compare/1.27.0...1.28.0) (2025-05-20)
 
 
