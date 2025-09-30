@@ -6,7 +6,7 @@ namespace {{ namespace }}\Actions\Pages;
 
 use {{ namespace }}\Forms\{{ modelClass }}Form;
 use Filament\Actions\EditAction;
-use Filament\Forms\Form;
+use Filament\Schemas\Schema;
 
 final class {{ modelClass }}EditHeaderAction
 {
@@ -16,7 +16,7 @@ final class {{ modelClass }}EditHeaderAction
     public static function make(): EditAction
     {
         return EditAction::make()
-            ->form(fn (Form $form) => {{ modelClass }}Form::make($form)
+            ->form(fn (Schema $schema) => {{ modelClass }}Form::make($schema)
             ->columns());
     }
 }

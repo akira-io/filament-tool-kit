@@ -8,7 +8,7 @@ use Akira\FilamentToolKit\InfoList\Entries\CreatedAtTextEntry;
 use Akira\FilamentToolKit\InfoList\Entries\UpdatedAtTextEntry;
 {{ fqn }}
 
-use Filament\Infolists\Components\Section;
+use Filament\Schemas\Components\Section;
 
 final class {{ modelClass }}InfoListSchema
 {

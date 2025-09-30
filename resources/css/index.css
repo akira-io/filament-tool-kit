@@ -1,1 +1,4 @@
-@import '../../vendor/filament/filament/resources/css/theme.css';
+@import "tailwindcss";
+
+@source "../../vendor/akira/filament-tool-kit/**/*.php";
+@source "../../vendor/akira/filament-tool-kit/resources/views/**/*.blade.php";

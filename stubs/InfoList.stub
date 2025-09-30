@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-use Filament\Infolists\Infolist;
+use Filament\Schemas\Schema;
 
 final class {{ modelClass }}InfoList
 {
     /**
      * Make the infolist.
      */
-    public static function make(Infolist $infolist): Infolist
+    public static function make(Schema $schema): Schema
     {
-        return $infolist
+        return $schema
                    ->schema({{ modelClass }}InfoListSchema::make())
                    ->columns(4);
     }

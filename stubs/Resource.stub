@@ -12,18 +12,18 @@ use {{ namespace }}\{{ resourceClass }}\Pages\{{ modelClass }}Pages;
 use {{ namespace }}\{{ resourceClass }}\RelationManagers\{{ modelClass }}Relations;
 use {{ namespace }}\{{ resourceClass }}\Tables\{{ modelClass }}Table;
 
-use Filament\Forms\Form;
-use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
+use BackedEnum;
+use Filament\Schemas\Schema;
 
-final class {{ resourceClass }} extends Resource
+final class {{ resourceClassName }} extends Resource
 {
     protected static ?string $model = {{ modelClass }}::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $activeNavigationIcon = 'heroicon-s-rectangle-stack';
+    protected static string|BackedEnum|null $activeNavigationIcon = 'heroicon-s-rectangle-stack';
 
      /**
       * Get the singular navigation label for the resource.
@@ -47,9 +47,9 @@ final class {{ resourceClass }} extends Resource
      * Get the form for the resource.
      *
      */
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return {{ modelClass }}Form::make($form);
+        return {{ modelClass }}Form::make($schema);
     }
 
     /**
@@ -65,9 +65,9 @@ final class {{ resourceClass }} extends Resource
      * Get the infolist for the resource.
      *
      */
-     public static function infolist(Infolist $infolist): Infolist
+     public static function infolist(Schema $schema): Schema
      {
-        return {{ modelClass }}Infolist::make($infolist);
+        return {{ modelClass }}Infolist::make($schema);
      }
 
 

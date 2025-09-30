@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use Filament\Tables\Actions\RestoreBulkAction;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
 
 final class {{ modelClass }}TableBulkActions
 {

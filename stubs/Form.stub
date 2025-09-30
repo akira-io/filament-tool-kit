@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-use Filament\Forms\Form;
+use Filament\Schemas\Schema;
 
 final class {{ modelClass }}Form
 {
     /**
      * Make the form.
      */
-    public static function make(Form $form): Form
+    public static function make(Schema $schema): Schema
     {
-        return $form
-            ->schema({{ modelClass }}FormSchema::make());
+        return $schema
+            ->schema({{ modelClass }}FormSchema::make())
+            ->columns(1);
     }
 }

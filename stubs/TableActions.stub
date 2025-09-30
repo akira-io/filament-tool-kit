@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\ViewAction;
-use Filament\Tables\Actions\DeleteAction;
-use Filament\Tables\Actions\RestoreAction;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\RestoreAction;
+use Filament\Actions\ViewAction;
 
 final class {{ modelClass }}TableActions
 {

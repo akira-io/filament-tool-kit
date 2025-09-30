@@ -132,10 +132,11 @@ final class MakeResourceCommand extends Command
             (Arr::first($resourceDirectories) ?? app_path('Filament/Resources/'));
 
         $resource = "{$model}Resource";
+        $resourceModelPath = str($model)->plural();
 
         // resource
         $baseResourcePath =
-            (string) str($resource)
+            (string) str($resourceModelPath)
                 ->prepend('/')
                 ->prepend($path)
                 ->replace('\\', '/')
@@ -202,7 +203,8 @@ final class MakeResourceCommand extends Command
             'modelClass' => $modelClass,
             'namespace' => $namespace,
             'resource' => $resource,
-            'resourceClass' => $resourceClass,
+            'resourceClass' => $resourceModelPath,
+            'resourceClassName' => $resource,
             'resourceLabel' => ucfirst(str_replace('_', ' ', (string) str($modelClass)->snake())),
             'resourcePluralLabel' => ucfirst(str_replace('_', ' ', (string)
             str($pluralModelClass)->snake())),
@@ -220,7 +222,7 @@ final class MakeResourceCommand extends Command
         }
 
         $this->copyStubToApp('ResourcePages', $resourcePagesPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Pages",
             'modelClass' => $modelClass,
             'pluralModelClass' => $pluralModelClass,
             'pages' => $this->indentString($pages, 3),
@@ -229,8 +231,8 @@ final class MakeResourceCommand extends Command
         $this->copyStubToApp('ViewPage', $viewPagePath, [
             'baseResourcePage' => ViewRecord::class.($needsAlias ? ' as BaseViewRecord' : ''),
             'baseResourcePageClass' => $needsAlias ? 'BaseViewRecord' : 'ViewRecord',
-            'namespace' => "{$namespace}\\{$resourceClass}",
-            'resource' => "{$namespace}\\{$resourceClass}",
+            'namespace' => "{$namespace}\\{$resourceModelPath}",
+            'resource' => "{$namespace}\\{$resourceModelPath}",
             'resourceClass' => $resourceClass,
             'resourcePageClass' => $viewResourcePageClass, 'modelClass' => $modelClass,
         ]);
@@ -245,8 +247,8 @@ final class MakeResourceCommand extends Command
                 'baseResourcePage' => EditRecord::class.($needsAlias ? ' as BaseEditRecord' : ''),
                 'baseResourcePageClass' => $needsAlias ? 'BaseEditRecord' : 'EditRecord',
                 'actions' => $this->indentString($editPageActions, 3),
-                'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
-                'resource' => "{$namespace}\\{$resourceClass}",
+                'namespace' => "{$namespace}\\{$resourceModelPath}\\Pages",
+                'resource' => "{$namespace}\\{$resourceModelPath}",
                 'resourceClass' => $resourceClass,
                 'resourcePageClass' => $editResourcePageClass,
             ]);
@@ -254,8 +256,8 @@ final class MakeResourceCommand extends Command
             $this->copyStubToApp('CreatePage', $createPagePath, [
                 'baseResourcePage' => CreateRecord::class.($needsAlias ? ' as BaseCreateRecord' : ''),
                 'baseResourcePageClass' => $needsAlias ? 'BaseCreateRecord' : 'CreateRecord',
-                'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
-                'resource' => "{$namespace}\\{$resourceClass}",
+                'namespace' => "{$namespace}\\{$resourceModelPath}\\Pages",
+                'resource' => "{$namespace}\\{$resourceModelPath}",
                 'resourceClass' => $resourceClass,
                 'resourcePageClass' => $createResourcePageClass,
             ]);
@@ -264,109 +266,107 @@ final class MakeResourceCommand extends Command
         $this->copyStubToApp('ListPage', $listPagePath, [
             'baseResourcePage' => ListRecords::class.($needsAlias ? ' as BaseListRecords' : ''),
             'baseResourcePageClass' => $needsAlias ? 'BaseListRecords' : 'ListRecords',
-            'namespace' => "{$namespace}\\{$resourceClass}\\Pages",
-            'resource' => "{$namespace}\\{$resourceClass}",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Pages",
+            'resource' => "{$namespace}\\{$resourceModelPath}",
             'resourceClass' => $resourceClass,
             'resourcePageClass' => $listResourcePageClass,
         ]);
 
         $this->copyStubToApp('EditHeaderAction', $editPageActionPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}",
+            'namespace' => "{$namespace}\\{$resourceModelPath}",
             'modelClass' => $modelClass,
         ]);
 
         $this->copyStubToApp('Table', $tablesPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Tables",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Tables",
             'modelClass' => $modelClass,
         ]);
 
         $tableActionsPath = "{$tablesPagesDirectory}/{$modelClass}TableActions.php";
 
         $this->copyStubToApp('TableActions', $tableActionsPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Tables",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Tables",
             'modelClass' => $modelClass,
         ]);
 
         $tableBulkActionsPath = "{$tablesPagesDirectory}/{$modelClass}TableBulkActions.php";
 
         $this->copyStubToApp('TableBulkActions', $tableBulkActionsPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Tables",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Tables",
             'modelClass' => $modelClass,
         ]);
 
         $tableFiltersPath = "{$tablesPagesDirectory}/{$modelClass}TableFilters.php";
 
         $this->copyStubToApp('TableFilters', $tableFiltersPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Tables",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Tables",
             'modelClass' => $modelClass,
         ]);
 
         $tableColumnsPath = "{$tablesPagesDirectory}/{$modelClass}TableColumns.php";
 
         $this->copyStubToApp('TableColumns', $tableColumnsPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Tables",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Tables",
             'modelClass' => $modelClass,
         ]);
 
         $this->copyStubToApp('Form', $formsPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Forms",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Forms",
             'modelClass' => $modelClass,
         ]);
 
         $formSchemaPath = "{$formsPagesDirectory}/{$modelClass}FormSchema.php";
 
         $this->copyStubToApp('FormSchema', $formSchemaPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\Forms",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Forms",
             'modelClass' => $modelClass,
         ]);
 
         // relations
 
         $this->copyStubToApp('Relations', $relationsPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\RelationManagers",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\RelationManagers",
             'modelClass' => $modelClass,
         ]);
 
         // infolist
 
         $this->copyStubToApp('InfoList', $infolistPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\InfoLists",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\InfoLists",
             'modelClass' => $modelClass,
         ]);
 
         $this->copyStubToApp('InfoListSchema', $infolistSchemaPath, [
-            'namespace' => "{$namespace}\\{$resourceClass}\\InfoLists",
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\InfoLists",
             'modelClass' => $modelClass,
         ]);
 
-        if ($this->option('generate')) {
-            $tableColumns = $this->generateTableColumns("{$modelNamespace}\\{$modelClass}");
+        $tableColumns = $this->generateTableColumns("{$modelNamespace}\\{$modelClass}");
 
-            $this->copyStubToApp('TableColumns', $tableColumnsPath, [
-                'namespace' => "{$namespace}\\{$resourceClass}\\Tables",
-                'fqn' => $this->indentString(implode(PHP_EOL, $this->getTableImportStatements()), 0),
-                'modelClass' => $modelClass,
-                'columns' => $this->indentString($tableColumns, 3),
-            ]);
+        $this->copyStubToApp('TableColumns', $tableColumnsPath, [
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Tables",
+            'fqn' => $this->indentString(implode(PHP_EOL, $this->getTableImportStatements()), 0),
+            'modelClass' => $modelClass,
+            'columns' => $this->indentString($tableColumns, 3),
+        ]);
 
-            $formFields = $this->generateFormFields("{$modelNamespace}\\{$modelClass}");
+        $formFields = $this->generateFormFields("{$modelNamespace}\\{$modelClass}");
 
-            $this->copyStubToApp('FormSchema', $formSchemaPath, [
-                'namespace' => "{$namespace}\\{$resourceClass}\\Forms",
-                'fqn' => $this->indentString(implode(PHP_EOL, $this->getFormImportStatements()), 0),
-                'modelClass' => $modelClass,
-                'fields' => $this->indentString($formFields, 3),
-            ]);
+        $this->copyStubToApp('FormSchema', $formSchemaPath, [
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\Forms",
+            'fqn' => $this->indentString(implode(PHP_EOL, $this->getFormImportStatements()), 0),
+            'modelClass' => $modelClass,
+            'fields' => $this->indentString($formFields, 3),
+        ]);
 
-            $infoListEntries = $this->generateInfoListEntries("{$modelNamespace}\\{$modelClass}");
+        $infoListEntries = $this->generateInfoListEntries("{$modelNamespace}\\{$modelClass}");
 
-            $this->copyStubToApp('InfoListSchema', $infolistSchemaPath, [
-                'namespace' => "{$namespace}\\{$resourceClass}\\InfoLists",
-                'fqn' => $this->indentString(implode(PHP_EOL, $this->getInfoListImportStatements()), 0),
-                'modelClass' => $modelClass,
-                'entries' => $this->indentString($infoListEntries, 3),
-            ]);
-        }
+        $this->copyStubToApp('InfoListSchema', $infolistSchemaPath, [
+            'namespace' => "{$namespace}\\{$resourceModelPath}\\InfoLists",
+            'fqn' => $this->indentString(implode(PHP_EOL, $this->getInfoListImportStatements()), 0),
+            'modelClass' => $modelClass,
+            'entries' => $this->indentString($infoListEntries, 3),
+        ]);
 
         return null;
     }

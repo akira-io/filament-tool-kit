@@ -9,7 +9,6 @@ use Akira\FilamentToolKit\Commands\MakeRelationManagerCommand;
 use Akira\FilamentToolKit\Commands\MakeResourceCommand;
 use Akira\FilamentToolKit\Testing\TestsFilamentToolKit;
 use Filament\Support\Assets\Asset;
-use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
@@ -104,7 +103,7 @@ final class FilamentToolKitServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filament-tool-kit', __DIR__ . '/../resources/dist/components/filament-tool-kit.js'),
-            Css::make('filament-tool-kit-styles', __DIR__.'/../resources/dist/filament-tool-kit.css'),
+            //            Css::make('filament-tool-kit-styles', __DIR__.'/../resources/dist/filament-tool-kit.css'),
             Js::make('filament-tool-kit-scripts', __DIR__.'/../resources/dist/filament-tool-kit.js'),
         ];
     }
